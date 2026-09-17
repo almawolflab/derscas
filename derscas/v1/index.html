@@ -254,14 +254,124 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s3">
   <div class="lbl"><div class="lbl-diamond"></div>El objetivo</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:32px;margin-top:40px">
+    <div class="d1" style="max-width:800px">
+      Convertir grabaciones de reuniones en documentación estructurada,
+      <em>trazable y lista para revisar</em> — casi sola.
+    </div>
+    <div class="stats" style="margin:0;max-width:640px;border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div class="stat">
+        <div class="stat-n">6–7 h</div>
+        <div class="stat-l">manuales hoy</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">~2–3 h</div>
+        <div class="stat-l">solo revisión</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">100%</div>
+        <div class="stat-l">trazabilidad a minuto</div>
+      </div>
+    </div>
+    <p class="body" style="max-width:620px;font-size:clamp(14px,1.25vw,17px)">
+      El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.<br>
+      El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.
+    </p>
+  </div>
 </div>
 <div class="slide" id="s4">
   <div class="lbl"><div class="lbl-diamond"></div>Problemas y soluciones</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div class="two-col" style="margin-top:64px">
+    <div>
+      <div class="d2">La documentación<br>se pierde y se inventa</div>
+      <ul class="dlist" style="margin-top:20px">
+        <li>6–7 h de trabajo manual por proyecto para redactar el DERS</li>
+        <li>Requerimientos inventados o sin trazabilidad a la reunión de origen</li>
+        <li>El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
+      </ul>
+    </div>
+    <div class="prows">
+      <div class="prow">
+        <div><div class="pp">Tiempo manual excesivo</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Automatización</div><div class="ps-txt">Generación automática desde las grabaciones — 2–3 h de revisión</div></div>
+      </div>
+      <div class="prow">
+        <div><div class="pp">Requerimientos inventados</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Trazabilidad</div><div class="ps-txt">0 falsos positivos — cada requerimiento apunta a reunión+minuto</div></div>
+      </div>
+      <div class="prow">
+        <div><div class="pp">Sin changelog</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Corrección incremental</div><div class="ps-txt">El consultor graba una corrección; el sistema aplica el diff con historial</div></div>
+      </div>
+      <div class="prow">
+        <div><div class="pp">DERCAS en blanco</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Dictado → estructura</div><div class="ps-txt">Viabilidad y criterios de aceptación desde la voz del consultor</div></div>
+      </div>
+      <div class="prow">
+        <div><div class="pp">Notificación manual</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Disparo automático</div><div class="ps-txt">WorkDrive trigger → PDF en carpeta de salida + email</div></div>
+      </div>
+      <div class="prow" style="border-bottom:none">
+        <div><div class="pp">Solo un consultor</div></div>
+        <div class="pa">→</div>
+        <div><div class="ps-lbl">Multi-usuario</div><div class="ps-txt">Carpeta compartida de salida — escalado por consultor/cliente</div></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s5">
   <div class="lbl"><div class="lbl-diamond"></div>Arquitectura</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:64px">
+    <div class="d2">Tres módulos encadenados,<br>un pipeline automático</div>
+    <div class="flow" style="margin:36px 0 20px">
+      <div class="flow-box">
+        <div class="flow-lbl">Entrada</div>
+        <div class="flow-name">🎙️ Grabaciones</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box red">
+        <div class="flow-lbl">Módulo 1 · Producción</div>
+        <div class="flow-name">DERS</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box">
+        <div class="flow-lbl">Salida 1</div>
+        <div class="flow-name">📄 DERS PDF</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box red">
+        <div class="flow-lbl">Módulo 2 · Piloto</div>
+        <div class="flow-name">DERCAS</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box">
+        <div class="flow-lbl">Salida 2</div>
+        <div class="flow-name">📋 DERCAS PDF</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box dim">
+        <div class="flow-lbl">Módulo 3 · Investigación</div>
+        <div class="flow-name">Parametrización</div>
+      </div>
+      <div class="flow-arr">→</div>
+      <div class="flow-box light">
+        <div class="flow-lbl">Destino</div>
+        <div class="flow-name">⚙️ Zoho CRM</div>
+      </div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 20px;max-width:780px;margin:0 auto">
+      <p class="body" style="font-size:13.5px;color:var(--navy)">
+        <strong>Despliegue:</strong> DERS y DERCAS corren en una <strong>sola instancia Catalyst de Sagitaz</strong> — el cliente solo recibe el documento, no se toca su Zoho. La Parametrización cruza a la org del cliente con <strong>conexión OAuth por cliente</strong> + sandbox + aprobación humana antes de producción.
+      </p>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s6">
   <div class="lbl"><div class="lbl-diamond"></div>Módulo DERS — Fase 1</div>
