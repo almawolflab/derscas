@@ -376,10 +376,64 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s6">
   <div class="lbl"><div class="lbl-diamond"></div>Módulo DERS — Fase 1</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div class="two-col w60" style="margin-top:64px">
+    <div>
+      <div class="d2">De las grabaciones<br>al borrador en minutos</div>
+      <div class="steps">
+        <div class="step"><div class="step-n">1</div><div class="step-txt">El consultor sube las grabaciones a <code>WorkDrive/&lt;Cliente&gt;/</code><small>El cron detecta archivos nuevos y dispara el pipeline</small></div></div>
+        <div class="step"><div class="step-n">2</div><div class="step-txt">Gemini transcribe el audio y extrae requerimientos a JSON<small>Cada requerimiento apunta a reunión + minuto de origen</small></div></div>
+        <div class="step"><div class="step-n">3</div><div class="step-txt">Se inyecta la plantilla estándar (boilerplate GDPR, formación, migración…)<small>Sin redacción manual — el esqueleto llega pre-rellenado</small></div></div>
+        <div class="step"><div class="step-n">4</div><div class="step-txt">PDF renderizado en <code>DERS/&lt;Cliente&gt;/</code> + email automático<small>El consultor recibe el borrador listo para revisar</small></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;height:100%">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px">Corrección incremental</div>
+        <ul class="dlist">
+          <li>El consultor graba un audio de corrección con los cambios</li>
+          <li>El sistema aplica el diff sobre el DERS existente</li>
+          <li>Changelog trazable — qué cambió, cuándo y por qué</li>
+          <li>Sin necesidad de reescribir el documento completo</li>
+        </ul>
+        <div style="margin-top:20px;padding:14px;background:rgba(193,59,47,.06);border-radius:6px;border-left:3px solid var(--red)">
+          <div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:4px">Validado · Jaque Legal</div>
+          <div style="font-size:12px;color:var(--gray)">3 reuniones · ~5 h de audio → DERS de 11 apartados generado automáticamente</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s7">
   <div class="lbl"><div class="lbl-diamond"></div>Módulo DERCAS — Fase 2</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div class="two-col w60" style="margin-top:64px">
+    <div>
+      <div class="d2">El consultor dicta<br>la solución. El sistema<br>la estructura.</div>
+      <div class="steps" style="margin-top:20px">
+        <div class="step"><div class="step-n">1</div><div class="step-txt">El consultor graba el dictado de viabilidad en <code>DERCAS/&lt;Cliente&gt;/</code></div></div>
+        <div class="step"><div class="step-n">2</div><div class="step-txt">El sistema empareja con el DERS base de ese cliente</div></div>
+        <div class="step"><div class="step-n">3</div><div class="step-txt">Gemini + RAG rellena viabilidad + criterios de aceptación<small>DERCAS previos y catálogo Zoho actúan como apoyo de estilo, nunca como fuente</small></div></div>
+        <div class="step"><div class="step-n">4</div><div class="step-txt">DERCAS en <code>DERS/&lt;Cliente&gt;/</code> + email · Lo no dictado → <code>[PENDIENTE]</code></div></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;flex:1">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:8px">Por cada requerimiento</div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--navy)">Análisis de viabilidad</div>
+          <div style="font-size:12px;color:var(--gray);margin-top:4px">Cómo se resuelve con Zoho — Blueprint, workflows, campos, roles…</div>
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--navy)">Criterios de aceptación</div>
+          <div style="font-size:12px;color:var(--gray);margin-top:4px">«Se verifica que [condición] → [resultado esperado]»</div>
+        </div>
+      </div>
+      <div style="padding:14px;background:rgba(193,59,47,.06);border-radius:6px;border-left:3px solid var(--red)">
+        <div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:4px">Directiva clave</div>
+        <div style="font-size:12px;color:var(--gray)">El modelo organiza, <strong style="color:var(--navy)">no inventa</strong>. El consultor siempre revisa antes de entregar.</div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s8">
   <div class="lbl"><div class="lbl-diamond"></div>Resultados DERS</div>
