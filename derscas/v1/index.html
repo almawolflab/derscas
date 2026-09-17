@@ -480,10 +480,65 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s10">
   <div class="lbl"><div class="lbl-diamond"></div>Lo que hemos corregido</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:64px">
+    <div class="d2">Del diseño al despliegue:<br>cinco ajustes</div>
+    <div class="ba-grid" style="margin-top:28px">
+      <div class="ba">
+        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">Transcripción lenta (audio secuencial)</div></div>
+        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Gemini Flash con chunking en paralelo</div></div>
+      </div>
+      <div class="ba">
+        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt"><code>MAIL_TO</code> hardcodeado — un solo destinatario</div></div>
+        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Derivado del dueño de la carpeta en WorkDrive</div></div>
+      </div>
+      <div class="ba">
+        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">DERCAS sin validar si existe DERS base</div></div>
+        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Validación previa + aviso al consultor si falta el DERS</div></div>
+      </div>
+      <div class="ba">
+        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">PDF con formato provisional (no plantilla 2026)</div></div>
+        <div class="ba-after"><div class="ba-lbl red">Pendiente (cosmético)</div><div class="ba-txt">Ajuste de render a plantilla oficial 2026 — contenido ya correcto</div></div>
+      </div>
+      <div class="ba" style="grid-column:span 2">
+        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">Entorno de prueba personal (<code>PruebasGabriel</code>, free tier)</div></div>
+        <div class="ba-after"><div class="ba-lbl red">Roadmap</div><div class="ba-txt">Catalyst env Production con cuenta/servicio de equipo · Decisión de plan de facturación</div></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s11">
   <div class="lbl"><div class="lbl-diamond"></div>Riesgos y mitigaciones</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:64px">
+    <div class="d2">Cada riesgo tiene<br>su mitigación por diseño</div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+      <div class="risk">
+        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Falsos positivos — requerimientos inventados</div></div>
+        <div class="risk-arr">→</div>
+        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Trazabilidad obligatoria a reunión+minuto; lo no encontrado queda <code>[PENDIENTE]</code></div></div>
+      </div>
+      <div class="risk">
+        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">DERCAS entregado sin revisión del consultor</div></div>
+        <div class="risk-arr">→</div>
+        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">El flujo termina con PDF para revisión, nunca con despliegue automático</div></div>
+      </div>
+      <div class="risk">
+        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Coste Gemini fuera de control</div></div>
+        <div class="risk-arr">→</div>
+        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">~$0.16/DERCAS conocido; cron con rate limit configurable</div></div>
+      </div>
+      <div class="risk">
+        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Vendor lock-in en Zoho Catalyst</div></div>
+        <div class="risk-arr">→</div>
+        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Arquitectura desacoplada — AppSail, Functions y WorkDrive son sustituibles</div></div>
+      </div>
+      <div class="risk">
+        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Datos del cliente en el pipeline de IA</div></div>
+        <div class="risk-arr">→</div>
+        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Sin PII en el JSON estructurado; grabaciones no se almacenan tras procesamiento</div></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s12">
   <div class="lbl"><div class="lbl-diamond"></div>Aprendizajes</div>
