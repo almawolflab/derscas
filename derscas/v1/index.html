@@ -438,10 +438,44 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s8">
   <div class="lbl"><div class="lbl-diamond"></div>Resultados DERS</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:56px">
+    <div class="d2">Caso real · Jaque Legal · Sep 2026</div>
+    <p class="body" style="margin-bottom:8px">Pipeline validado end-to-end con un caso real</p>
+    <div class="stats" style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div class="stat"><div class="stat-n">3</div><div class="stat-l">reuniones procesadas</div></div>
+      <div class="stat"><div class="stat-n">~5 h</div><div class="stat-l">de audio transcrito</div></div>
+      <div class="stat"><div class="stat-n">11</div><div class="stat-l">apartados en el DERS generado</div></div>
+    </div>
+    <div class="rc-grid">
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Disparo automático <span class="arr">→</span> Sin intervención</div></div><div class="rc-b">WorkDrive trigger → pipeline completo sin acción del consultor</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">0 requerimientos inventados <span class="arr">→</span> Trazabilidad</div></div><div class="rc-b">Cada ítem apunta a reunión + minuto de origen — verificable</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Plantilla boilerplate <span class="arr">→</span> Inyectada</div></div><div class="rc-b">GDPR, formación, migración pre-rellenados sin redacción manual</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">PDF entregado <span class="arr">→</span> Email automático</div></div><div class="rc-b">Documento en carpeta de salida + notificación al consultor</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Corrección incremental <span class="arr">→</span> Operativa</div></div><div class="rc-b">Audio de corrección → diff aplicado → changelog trazable</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Tiempo <span class="arr">→</span> 6–7 h manuales a ~2–3 h revisión</div></div><div class="rc-b">El consultor revisa y ajusta, no transcribe ni redacta desde cero</div></div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s9">
   <div class="lbl"><div class="lbl-diamond"></div>Resultados DERCAS</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:56px">
+    <div class="d2">Caso real · TuFisio · Sep 2026</div>
+    <p class="body" style="margin-bottom:8px">Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong></p>
+    <div class="stats" style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div class="stat"><div class="stat-n">~$0.16</div><div class="stat-l">por DERCAS (Gemini)</div></div>
+      <div class="stat"><div class="stat-n">0</div><div class="stat-l">servicios nuevos de coste fijo</div></div>
+      <div class="stat"><div class="stat-n">100%</div><div class="stat-l">end-to-end sin intervención</div></div>
+    </div>
+    <div class="rc-grid">
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Generador construido <span class="arr">→</span> Viabilidad + criterios</div></div><div class="rc-b">Rellena ambos bloques desde el dictado; lo no dictado → <code>[PENDIENTE]</code></div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Endpoint <span class="arr">→</span> <code>/procesar-dercas</code></div></div><div class="rc-b">AppSail operativo con disparo automático desde el cron</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Cron escanea <span class="arr">→</span> <code>DERCAS/&lt;Cliente&gt;/</code></div></div><div class="rc-b">Detecta dictados nuevos, empareja con el DERS base del cliente</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Emparejamiento automático <span class="arr">→</span> DERS base</div></div><div class="rc-b">Requiere que el DERS del cliente ya exista — validación previa incluida</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Entrega <span class="arr">→</span> <code>DERS/&lt;Cliente&gt;/</code> + email</div></div><div class="rc-b">DERCAS en carpeta de salida + notificación, sin intervención humana</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Coste <span class="arr">→</span> Reutiliza cron/pool DERS</div></div><div class="rc-b">Sin servicio nuevo de coste fijo — mismo pool que el módulo DERS</div></div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s10">
   <div class="lbl"><div class="lbl-diamond"></div>Lo que hemos corregido</div>
