@@ -543,14 +543,60 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s12">
   <div class="lbl"><div class="lbl-diamond"></div>Aprendizajes</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:64px">
+    <div class="d2">Lo que nos ha enseñado<br>el primer caso real</div>
+    <div class="learn-grid">
+      <div class="learn-item">
+        <div class="learn-q">¿Qué ha funcionado?</div>
+        <div class="learn-a">El pipeline de punta a punta sin intervención. La trazabilidad a reunión+minuto elimina la duda del consultor sobre el origen de cada requerimiento — nada se inventa, todo se puede verificar.</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-q">¿Qué hay que cambiar?</div>
+        <div class="learn-a">El enrutado del aviso (hoy <code>MAIL_TO</code> hardcodeado → derivar del dueño de la carpeta). El formato PDF a la plantilla 2026. Una pasada <em>longform</em> en DERCAS para más profundidad por requerimiento.</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-q">¿Qué hemos descartado?</div>
+        <div class="learn-a">El MCP de Zoho para la Parametrización: bug de passthrough en lecturas, coste excesivo en tokens y escritura bloqueada. Reemplazado por <strong style="color:var(--navy)">REST v8 directa</strong>, más fiable y predecible.</div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s13">
   <div class="lbl"><div class="lbl-diamond"></div>Siguientes fases</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="margin-top:64px">
+    <div class="d2">Lo que viene — tres frentes</div>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="next-n"><span class="next-diamond"></span>01</div>
+        <div class="next-title">Escalado operativo</div>
+        <div class="next-body">Enrutar el aviso al consultor dueño de la carpeta en WorkDrive · Canal Zoho Cliq como alternativa al email · Índice de clientes en Data Store · Permisos WorkDrive por consultor/cliente</div>
+      </div>
+      <div class="next-card">
+        <div class="next-n"><span class="next-diamond"></span>02</div>
+        <div class="next-title">Paso a producción</div>
+        <div class="next-body">Catalyst env Production con cuenta/servicio de equipo (no personal) · Decisión de plan de facturación (Job Scheduling deja de ser gratis) · Multi-usuario operativo</div>
+      </div>
+      <div class="next-card">
+        <div class="next-n"><span class="next-diamond"></span>03</div>
+        <div class="next-title">Parametrización</div>
+        <div class="next-body">Traducir el DERCAS cerrado a configuración ejecutable en Zoho CRM via REST v8 · Siempre en sandbox · Aprobación humana antes de producción · Campos, picklists, workflows, blueprints, roles y perfiles</div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s14">
   <div class="lbl"><div class="lbl-diamond"></div>Equipo</div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:40px">
+    <div class="d2" style="text-align:center">Equipo</div>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-role">Product Owner</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role">Desarrollo / IA</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role">Consultor validador</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role">Sponsor</div><div class="team-name">—</div></div>
+    </div>
+  </div>
 </div>
 <div class="slide" id="s15">
   <div class="diag-wrap" style="transform:scaleX(-1) scaleY(-1)"><div class="diag-r"></div><div class="diag-g"></div></div>
