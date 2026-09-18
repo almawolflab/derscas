@@ -281,7 +281,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     </div>
     <p class="body" style="max-width:620px;font-size:clamp(14px,1.25vw,17px)">
       <span data-i18n="s3.body">El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.</span><br>
-      El consultor <strong style="color:var(--navy)" data-i18n="s3.body2">revisa</strong>, <span data-i18n="s3.notranscribe">no transcribe.</span>
+      <span data-i18n-html="s3.body3">El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.</span>
     </p>
   </div>
 </div>
@@ -483,7 +483,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:56px">
     <div class="d2" data-i18n="s9.title">Caso real · TuFisio · Sep 2026</div>
-    <p class="body" data-i18n="s9.sub" style="margin-bottom:8px">Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong></p>
+    <p class="body" data-i18n-html="s9.sub" style="margin-bottom:8px">Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong></p>
     <div class="stats" style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
       <div class="stat"><div class="stat-n">~$0.16</div><div class="stat-l">por DERCAS (Gemini)</div></div>
       <div class="stat"><div class="stat-n">0</div><div class="stat-l">servicios nuevos de coste fijo</div></div>
@@ -683,7 +683,7 @@ const i18n = {
     's3.stat2':'~2–3 h','s3.stat2l':'solo revisión',
     's3.stat3':'100%','s3.stat3l':'trazabilidad a minuto',
     's3.body':'El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.',
-    's3.body2':'revisa','s3.notranscribe':'no transcribe.',
+    's3.body3':'El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.',
     's4.lbl':'Problemas y soluciones','s4.title':'La documentación se pierde y se inventa',
     's4.li1':'6–7 h de trabajo manual por proyecto para redactar el DERS',
     's4.li2':'Requerimientos inventados o sin trazabilidad a la reunión de origen',
@@ -707,7 +707,7 @@ const i18n = {
     's8.lbl':'Resultados DERS','s8.title':'Caso real · Jaque Legal · Sep 2026',
     's8.sub':'Pipeline validado end-to-end con un caso real',
     's9.lbl':'Resultados DERCAS','s9.title':'Caso real · TuFisio · Sep 2026',
-    's9.sub':'Validado end-to-end · 16 Sep 2026',
+    's9.sub':'Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong>',
     's10.lbl':'Lo que hemos corregido','s10.title':'Del diseño al despliegue: cinco ajustes',
     's11.lbl':'Riesgos y mitigaciones','s11.title':'Cada riesgo tiene su mitigación por diseño',
     's12.lbl':'Aprendizajes','s12.title':'Lo que nos ha enseñado el primer caso real',
@@ -732,7 +732,7 @@ const i18n = {
     's3.stat2':'~2–3 h','s3.stat2l':'review only',
     's3.stat3':'100%','s3.stat3l':'traceability to the minute',
     's3.body':'The consultant uploads recordings. The system generates the DERS and DERCAS.',
-    's3.body2':'reviews','s3.notranscribe':"doesn't transcribe.",
+    's3.body3':'The consultant <strong style="color:var(--navy)">reviews</strong>, doesn\'t transcribe.',
     's4.lbl':'Problems and solutions','s4.title':'Documentation gets lost and invented',
     's4.li1':'6–7 hours of manual work per project to draft the DERS',
     's4.li2':'Invented requirements or ones without traceability to their source meeting',
@@ -756,7 +756,7 @@ const i18n = {
     's8.lbl':'DERS Results','s8.title':'Real case · Jaque Legal · Sep 2026',
     's8.sub':'End-to-end validated pipeline with a real case',
     's9.lbl':'DERCAS Results','s9.title':'Real case · TuFisio · Sep 2026',
-    's9.sub':'End-to-end validated · 16 Sep 2026',
+    's9.sub':'End-to-end validated · <strong style="color:var(--navy)">16 Sep 2026</strong>',
     's10.lbl':'What we fixed','s10.title':'From design to deployment: five adjustments',
     's11.lbl':'Risks and mitigations','s11.title':'Every risk has its mitigation by design',
     's12.lbl':'Learnings','s12.title':'What the first real case taught us',
