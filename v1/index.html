@@ -208,7 +208,8 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .learn-a{font-size:13px;color:var(--navy);line-height:1.65}
 
 code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; background: rgba(193,59,47,.1); color: var(--red); padding: 1px 5px; border-radius: 3px; }
-#s3 .d1 { font-size: clamp(28px, 3.8vw, 56px); }
+#s3 .d1 { font-size: clamp(20px, 2.2vw, 32px); }
+#s3 .stat-n { font-size: clamp(26px, 3.2vw, 46px); }
 
 </style>
 </head>
@@ -291,10 +292,10 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div class="two-col" style="margin-top:64px">
     <div>
-      <div class="d2" data-i18n="s4.title">La documentación<br>se pierde y se inventa</div>
+      <div class="d2" data-i18n="s4.title">La documentación<br>pierde trazabilidad</div>
       <ul class="dlist" style="margin-top:20px">
         <li data-i18n="s4.li1">6–7 h de trabajo manual por proyecto para redactar el DERS</li>
-        <li data-i18n="s4.li2">Requerimientos inventados o sin trazabilidad a la reunión de origen</li>
+        <li data-i18n="s4.li2">Requerimientos sin trazabilidad verificable a la reunión de origen</li>
         <li data-i18n="s4.li3">El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
       </ul>
     </div>
@@ -305,7 +306,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <div><div class="ps-lbl" data-i18n="s4.s1lbl">Automatización</div><div class="ps-txt" data-i18n="s4.s1txt">Generación automática desde las grabaciones — 2–3 h de revisión</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp" data-i18n="s4.p2">Requerimientos inventados</div></div>
+        <div><div class="pp" data-i18n="s4.p2">Sin trazabilidad verificable</div></div>
         <div class="pa">→</div>
         <div><div class="ps-lbl" data-i18n="s4.s2lbl">Trazabilidad</div><div class="ps-txt" data-i18n="s4.s2txt">0 falsos positivos — cada requerimiento apunta a reunión+minuto</div></div>
       </div>
@@ -453,7 +454,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
       </div>
       <div style="padding:14px;background:rgba(193,59,47,.06);border-radius:6px;border-left:3px solid var(--red)">
         <div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:4px">Directiva clave</div>
-        <div style="font-size:12px;color:var(--gray)">El modelo organiza, <strong style="color:var(--navy)">no inventa</strong>. El consultor siempre revisa antes de entregar.</div>
+        <div style="font-size:12px;color:var(--gray)">El modelo organiza, el consultor <strong style="color:var(--navy)">valida y entrega</strong>. Cada requerimiento es verificable.</div>
       </div>
     </div>
   </div>
@@ -471,7 +472,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     </div>
     <div class="rc-grid">
       <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Disparo automático <span class="arr">→</span> Sin intervención</div></div><div class="rc-b">WorkDrive trigger → pipeline completo sin acción del consultor</div></div>
-      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">0 requerimientos inventados <span class="arr">→</span> Trazabilidad</div></div><div class="rc-b">Cada ítem apunta a reunión + minuto de origen — verificable</div></div>
+      <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">100% trazabilidad <span class="arr">→</span> Verificable</div></div><div class="rc-b">Cada requerimiento apunta a reunión + minuto de origen</div></div>
       <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Plantilla boilerplate <span class="arr">→</span> Inyectada</div></div><div class="rc-b">GDPR, formación, migración pre-rellenados sin redacción manual</div></div>
       <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">PDF entregado <span class="arr">→</span> Email automático</div></div><div class="rc-b">Documento en carpeta de salida + notificación al consultor</div></div>
       <div class="rc"><div class="rc-h"><div class="rc-ck">✓</div><div class="rc-t">Corrección incremental <span class="arr">→</span> Operativa</div></div><div class="rc-b">Audio de corrección → diff aplicado → changelog trazable</div></div>
@@ -536,7 +537,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     <div class="d2" data-i18n="s11.title">Cada riesgo tiene<br>su mitigación por diseño</div>
     <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Falsos positivos — requerimientos inventados</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Falsos positivos — requerimientos sin origen verificable</div></div>
         <div class="risk-arr">→</div>
         <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">Trazabilidad obligatoria a reunión+minuto; lo no encontrado queda <code>[PENDIENTE]</code></div></div>
       </div>
@@ -571,7 +572,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     <div class="learn-grid">
       <div class="learn-item">
         <div class="learn-q" data-i18n="s12.q1">¿Qué ha funcionado?</div>
-        <div class="learn-a">El pipeline de punta a punta sin intervención. La trazabilidad a reunión+minuto elimina la duda del consultor sobre el origen de cada requerimiento — nada se inventa, todo se puede verificar.</div>
+        <div class="learn-a">El pipeline de punta a punta sin intervención. La trazabilidad a reunión+minuto da al consultor la certeza del origen de cada requerimiento — todo es verificable, nada queda en el aire.</div>
       </div>
       <div class="learn-item">
         <div class="learn-q" data-i18n="s12.q2">¿Qué hay que cambiar?</div>
@@ -685,13 +686,13 @@ const i18n = {
     's3.stat3':'100%','s3.stat3l':'trazabilidad a minuto',
     's3.body':'El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.',
     's3.body3':'El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.',
-    's4.lbl':'Problemas y soluciones','s4.title':'La documentación se pierde y se inventa',
+    's4.lbl':'Problemas y soluciones','s4.title':'La documentación pierde trazabilidad',
     's4.li1':'6–7 h de trabajo manual por proyecto para redactar el DERS',
-    's4.li2':'Requerimientos inventados o sin trazabilidad a la reunión de origen',
+    's4.li2':'Requerimientos sin trazabilidad verificable a la reunión de origen',
     's4.li3':'El DERCAS (viabilidad + criterios) se completa a mano o no se completa',
     's4.p1':'Tiempo manual excesivo','s4.s1lbl':'Automatización',
     's4.s1txt':'Generación automática desde las grabaciones — 2–3 h de revisión',
-    's4.p2':'Requerimientos inventados','s4.s2lbl':'Trazabilidad',
+    's4.p2':'Sin trazabilidad verificable','s4.s2lbl':'Trazabilidad',
     's4.s2txt':'0 falsos positivos — cada requerimiento apunta a reunión+minuto',
     's4.p3':'Sin changelog','s4.s3lbl':'Corrección incremental',
     's4.s3txt':'El consultor graba una corrección; el sistema aplica el diff con historial',
@@ -734,13 +735,13 @@ const i18n = {
     's3.stat3':'100%','s3.stat3l':'traceability to the minute',
     's3.body':'The consultant uploads recordings. The system generates the DERS and DERCAS.',
     's3.body3':'The consultant <strong style="color:var(--navy)">reviews</strong>, doesn\'t transcribe.',
-    's4.lbl':'Problems and solutions','s4.title':'Documentation gets lost and invented',
+    's4.lbl':'Problems and solutions','s4.title':'Documentation loses traceability',
     's4.li1':'6–7 hours of manual work per project to draft the DERS',
-    's4.li2':'Invented requirements or ones without traceability to their source meeting',
+    's4.li2':'Requirements without verifiable traceability to their source meeting',
     's4.li3':'The DERCAS (feasibility + criteria) is completed manually or not at all',
     's4.p1':'Excessive manual time','s4.s1lbl':'Automation',
     's4.s1txt':'Automatic generation from recordings — 2–3 h of review',
-    's4.p2':'Invented requirements','s4.s2lbl':'Traceability',
+    's4.p2':'No verifiable traceability','s4.s2lbl':'Traceability',
     's4.s2txt':'0 false positives — every requirement points to meeting+minute',
     's4.p3':'No changelog','s4.s3lbl':'Incremental correction',
     's4.s3txt':'The consultant records a correction; the system applies the diff with changelog',
