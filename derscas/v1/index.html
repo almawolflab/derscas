@@ -331,9 +331,9 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s5">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s5.lbl">Arquitectura</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="margin-top:64px">
-    <div class="d2" data-i18n="s5.title">Tres módulos encadenados,<br>un pipeline automático</div>
-    <div class="flow" style="margin:36px 0 20px">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
+    <div class="d2" data-i18n="s5.title">Tres módulos encadenados.</div>
+    <div class="flow" style="margin:0">
       <div class="flow-box">
         <div class="flow-lbl">Entrada</div>
         <div class="flow-name">🎙️ Grabaciones</div>
@@ -368,11 +368,6 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <div class="flow-lbl">Destino</div>
         <div class="flow-name">⚙️ Zoho CRM</div>
       </div>
-    </div>
-    <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 20px;max-width:780px;margin:0 auto">
-      <p class="body" style="font-size:13.5px;color:var(--navy)">
-        <strong>Despliegue:</strong> DERS y DERCAS corren en una <strong>sola instancia Catalyst de Sagitaz</strong> — el cliente solo recibe el documento, no se toca su Zoho. La Parametrización cruza a la org del cliente con <strong>conexión OAuth por cliente</strong> + sandbox + aprobación humana antes de producción.
-      </p>
     </div>
   </div>
 </div>
