@@ -54,20 +54,15 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .stat-n { font-size: clamp(36px,4.8vw,68px); font-weight: 800; color: var(--red); line-height: 1; }
 .stat-l { font-size: 12px; font-weight: 500; color: var(--gray); margin-top: 4px; }
 
-#nav {
-  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-  display: flex; align-items: center; gap: 16px;
-  background: rgba(15,17,25,.72); backdrop-filter: blur(10px);
-  border-radius: 100px; padding: 10px 20px;
-  font-size: 12px; color: rgba(255,255,255,.6);
-}
-#nav button {
-  background: none; border: none; color: #fff; cursor: pointer;
-  font-size: 14px; padding: 2px 8px; border-radius: 4px;
-  transition: background .15s;
-}
-#nav button:hover { background: rgba(255,255,255,.12); }
-#ctr { min-width: 48px; text-align: center; color: rgba(255,255,255,.5); }
+.nav{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:rgba(15,17,25,.82);border-radius:24px;padding:7px 14px;color:#fff;font-size:12.5px;backdrop-filter:blur(10px);z-index:200;font-family:var(--f)}
+.nav button{background:none;border:none;color:rgba(255,255,255,.75);cursor:pointer;padding:3px 7px;font-size:15px;transition:color .15s}
+.nav button:hover{color:#fff}
+.nav .cnt{min-width:44px;text-align:center;color:rgba(255,255,255,.5);font-size:11px}
+.nav .kh{font-size:10px;color:rgba(255,255,255,.3);margin-left:4px}
+.nav .lang-sep{width:1px;height:16px;background:rgba(255,255,255,.2);margin:0 6px}
+#lang-toggle{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.75);cursor:pointer;padding:2px 8px;font-size:10px;border-radius:10px;letter-spacing:.08em;font-family:var(--f);transition:all .15s}
+#lang-toggle:hover{border-color:#fff;color:#fff}
+#lang-toggle.en{border-color:#C13B2F;color:#C13B2F}
 
 .waveform { display: flex; align-items: center; gap: 4px; height: 40px; }
 .waveform .bar {
@@ -236,107 +231,107 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 
 <!-- S2: ÍNDICE -->
 <div class="slide" id="s2">
-  <div class="lbl"><div class="lbl-diamond"></div>Índice</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="idx.lbl">Índice</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div class="d2" style="margin-top:56px">Índice — Lo que vamos a ver</div>
+  <div class="d2" style="margin-top:56px"><span data-i18n="idx.lbl">Índice</span> — <span data-i18n="idx.intro">Lo que vamos a ver.</span></div>
   <div class="idx-grid">
-    <div class="idx-row"><span class="idx-n">01</span>El objetivo</div>
-    <div class="idx-row"><span class="idx-n">08</span>Lo que hemos corregido</div>
-    <div class="idx-row"><span class="idx-n">02</span>Problemas y soluciones</div>
-    <div class="idx-row"><span class="idx-n">09</span>Riesgos y mitigaciones</div>
-    <div class="idx-row"><span class="idx-n">03</span>Arquitectura</div>
-    <div class="idx-row"><span class="idx-n">10</span>Aprendizajes</div>
-    <div class="idx-row"><span class="idx-n">04</span>Módulo DERS</div>
-    <div class="idx-row"><span class="idx-n">11</span>Siguientes fases</div>
-    <div class="idx-row"><span class="idx-n">05</span>Módulo DERCAS</div>
-    <div class="idx-row"><span class="idx-n">12</span>Equipo</div>
-    <div class="idx-row"><span class="idx-n">06</span>Resultados DERS</div>
+    <div class="idx-row"><span class="idx-n">01</span><span data-i18n="idx.01">El objetivo</span></div>
+    <div class="idx-row"><span class="idx-n">08</span><span data-i18n="idx.08">Lo que hemos corregido</span></div>
+    <div class="idx-row"><span class="idx-n">02</span><span data-i18n="idx.02">Problemas y soluciones</span></div>
+    <div class="idx-row"><span class="idx-n">09</span><span data-i18n="idx.09">Riesgos y mitigaciones</span></div>
+    <div class="idx-row"><span class="idx-n">03</span><span data-i18n="idx.03">Arquitectura</span></div>
+    <div class="idx-row"><span class="idx-n">10</span><span data-i18n="idx.10">Aprendizajes</span></div>
+    <div class="idx-row"><span class="idx-n">04</span><span data-i18n="idx.04">Módulo DERS</span></div>
+    <div class="idx-row"><span class="idx-n">11</span><span data-i18n="idx.11">Siguientes fases</span></div>
+    <div class="idx-row"><span class="idx-n">05</span><span data-i18n="idx.05">Módulo DERCAS</span></div>
+    <div class="idx-row"><span class="idx-n">12</span><span data-i18n="idx.12">Equipo</span></div>
+    <div class="idx-row"><span class="idx-n">06</span><span data-i18n="idx.06">Resultados DERS</span></div>
     <div class="idx-row"><span class="idx-n">13</span>Demo</div>
-    <div class="idx-row"><span class="idx-n">07</span>Resultados DERCAS</div>
+    <div class="idx-row"><span class="idx-n">07</span><span data-i18n="idx.07">Resultados DERCAS</span></div>
     <div class="idx-row" style="border-bottom:none"></div>
   </div>
 </div>
 
 <!-- S3–S15: PLACEHOLDERS -->
 <div class="slide" id="s3">
-  <div class="lbl"><div class="lbl-diamond"></div>El objetivo</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s3.lbl">El objetivo</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:32px;margin-top:40px">
-    <div class="d1" style="max-width:800px">
+    <div class="d1" data-i18n-html="s3.big" style="max-width:800px">
       Convertir grabaciones de reuniones en documentación estructurada,
       <em>trazable y lista para revisar</em> — casi sola.
     </div>
     <div class="stats" style="margin:0;max-width:640px;border:1px solid var(--border);border-radius:10px;overflow:hidden">
       <div class="stat">
-        <div class="stat-n">6–7 h</div>
-        <div class="stat-l">manuales hoy</div>
+        <div class="stat-n" data-i18n="s3.stat1">6–7 h</div>
+        <div class="stat-l" data-i18n="s3.stat1l">manuales hoy</div>
       </div>
       <div class="stat">
-        <div class="stat-n">~2–3 h</div>
-        <div class="stat-l">solo revisión</div>
+        <div class="stat-n" data-i18n="s3.stat2">~2–3 h</div>
+        <div class="stat-l" data-i18n="s3.stat2l">solo revisión</div>
       </div>
       <div class="stat">
-        <div class="stat-n">100%</div>
-        <div class="stat-l">trazabilidad a minuto</div>
+        <div class="stat-n" data-i18n="s3.stat3">100%</div>
+        <div class="stat-l" data-i18n="s3.stat3l">trazabilidad a minuto</div>
       </div>
     </div>
     <p class="body" style="max-width:620px;font-size:clamp(14px,1.25vw,17px)">
-      El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.<br>
-      El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.
+      <span data-i18n="s3.body">El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.</span><br>
+      El consultor <strong style="color:var(--navy)" data-i18n="s3.body2">revisa</strong>, <span data-i18n="s3.notranscribe">no transcribe.</span>
     </p>
   </div>
 </div>
 <div class="slide" id="s4">
-  <div class="lbl"><div class="lbl-diamond"></div>Problemas y soluciones</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s4.lbl">Problemas y soluciones</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div class="two-col" style="margin-top:64px">
     <div>
-      <div class="d2">La documentación<br>se pierde y se inventa</div>
+      <div class="d2" data-i18n="s4.title">La documentación<br>se pierde y se inventa</div>
       <ul class="dlist" style="margin-top:20px">
-        <li>6–7 h de trabajo manual por proyecto para redactar el DERS</li>
-        <li>Requerimientos inventados o sin trazabilidad a la reunión de origen</li>
-        <li>El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
+        <li data-i18n="s4.li1">6–7 h de trabajo manual por proyecto para redactar el DERS</li>
+        <li data-i18n="s4.li2">Requerimientos inventados o sin trazabilidad a la reunión de origen</li>
+        <li data-i18n="s4.li3">El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
       </ul>
     </div>
     <div class="prows">
       <div class="prow">
-        <div><div class="pp">Tiempo manual excesivo</div></div>
+        <div><div class="pp" data-i18n="s4.p1">Tiempo manual excesivo</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Automatización</div><div class="ps-txt">Generación automática desde las grabaciones — 2–3 h de revisión</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s1lbl">Automatización</div><div class="ps-txt" data-i18n="s4.s1txt">Generación automática desde las grabaciones — 2–3 h de revisión</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp">Requerimientos inventados</div></div>
+        <div><div class="pp" data-i18n="s4.p2">Requerimientos inventados</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Trazabilidad</div><div class="ps-txt">0 falsos positivos — cada requerimiento apunta a reunión+minuto</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s2lbl">Trazabilidad</div><div class="ps-txt" data-i18n="s4.s2txt">0 falsos positivos — cada requerimiento apunta a reunión+minuto</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp">Sin changelog</div></div>
+        <div><div class="pp" data-i18n="s4.p3">Sin changelog</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Corrección incremental</div><div class="ps-txt">El consultor graba una corrección; el sistema aplica el diff con historial</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s3lbl">Corrección incremental</div><div class="ps-txt" data-i18n="s4.s3txt">El consultor graba una corrección; el sistema aplica el diff con historial</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp">DERCAS en blanco</div></div>
+        <div><div class="pp" data-i18n="s4.p4">DERCAS en blanco</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Dictado → estructura</div><div class="ps-txt">Viabilidad y criterios de aceptación desde la voz del consultor</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s4lbl">Dictado → estructura</div><div class="ps-txt" data-i18n="s4.s4txt">Viabilidad y criterios de aceptación desde la voz del consultor</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp">Notificación manual</div></div>
+        <div><div class="pp" data-i18n="s4.p5">Notificación manual</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Disparo automático</div><div class="ps-txt">WorkDrive trigger → PDF en carpeta de salida + email</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s5lbl">Disparo automático</div><div class="ps-txt" data-i18n="s4.s5txt">WorkDrive trigger → PDF en carpeta de salida + email</div></div>
       </div>
       <div class="prow" style="border-bottom:none">
-        <div><div class="pp">Solo un consultor</div></div>
+        <div><div class="pp" data-i18n="s4.p6">Solo un consultor</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl">Multi-usuario</div><div class="ps-txt">Carpeta compartida de salida — escalado por consultor/cliente</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s6lbl">Multi-usuario</div><div class="ps-txt" data-i18n="s4.s6txt">Carpeta compartida de salida — escalado por consultor/cliente</div></div>
       </div>
     </div>
   </div>
 </div>
 <div class="slide" id="s5">
-  <div class="lbl"><div class="lbl-diamond"></div>Arquitectura</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s5.lbl">Arquitectura</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:64px">
-    <div class="d2">Tres módulos encadenados,<br>un pipeline automático</div>
+    <div class="d2" data-i18n="s5.title">Tres módulos encadenados,<br>un pipeline automático</div>
     <div class="flow" style="margin:36px 0 20px">
       <div class="flow-box">
         <div class="flow-lbl">Entrada</div>
@@ -381,11 +376,11 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s6">
-  <div class="lbl"><div class="lbl-diamond"></div>Módulo DERS — Fase 1</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s6.lbl">Módulo DERS — Fase 1</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div class="two-col w60" style="margin-top:64px">
     <div>
-      <div class="d2">De las grabaciones<br>al borrador en minutos</div>
+      <div class="d2" data-i18n="s6.title">De las grabaciones<br>al borrador en minutos</div>
       <div class="steps">
         <div class="step"><div class="step-n">1</div><div class="step-txt">El consultor sube las grabaciones a <code>WorkDrive/&lt;Cliente&gt;/</code><small>El cron detecta archivos nuevos y dispara el pipeline</small></div></div>
         <div class="step"><div class="step-n">2</div><div class="step-txt">Gemini transcribe el audio y extrae requerimientos a JSON<small>Cada requerimiento apunta a reunión + minuto de origen</small></div></div>
@@ -395,7 +390,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     </div>
     <div>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;height:100%">
-        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px">Corrección incremental</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:12px" data-i18n="s6.ci">Corrección incremental</div>
         <ul class="dlist">
           <li>El consultor graba un audio de corrección con los cambios</li>
           <li>El sistema aplica el diff sobre el DERS existente</li>
@@ -411,11 +406,11 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s7">
-  <div class="lbl"><div class="lbl-diamond"></div>Módulo DERCAS — Fase 2</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s7.lbl">Módulo DERCAS — Fase 2</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div class="two-col w60" style="margin-top:64px">
     <div>
-      <div class="d2">El consultor dicta<br>la solución. El sistema<br>la estructura.</div>
+      <div class="d2" data-i18n="s7.title">El consultor dicta<br>la solución. El sistema<br>la estructura.</div>
       <div class="steps" style="margin-top:20px">
         <div class="step"><div class="step-n">1</div><div class="step-txt">El consultor graba el dictado de viabilidad en <code>DERCAS/&lt;Cliente&gt;/</code></div></div>
         <div class="step"><div class="step-n">2</div><div class="step-txt">El sistema empareja con el DERS base de ese cliente</div></div>
@@ -443,11 +438,11 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s8">
-  <div class="lbl"><div class="lbl-diamond"></div>Resultados DERS</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s8.lbl">Resultados DERS</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:56px">
-    <div class="d2">Caso real · Jaque Legal · Sep 2026</div>
-    <p class="body" style="margin-bottom:8px">Pipeline validado end-to-end con un caso real</p>
+    <div class="d2" data-i18n="s8.title">Caso real · Jaque Legal · Sep 2026</div>
+    <p class="body" data-i18n="s8.sub" style="margin-bottom:8px">Pipeline validado end-to-end con un caso real</p>
     <div class="stats" style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
       <div class="stat"><div class="stat-n">3</div><div class="stat-l">reuniones procesadas</div></div>
       <div class="stat"><div class="stat-n">~5 h</div><div class="stat-l">de audio transcrito</div></div>
@@ -464,11 +459,11 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s9">
-  <div class="lbl"><div class="lbl-diamond"></div>Resultados DERCAS</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s9.lbl">Resultados DERCAS</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:56px">
-    <div class="d2">Caso real · TuFisio · Sep 2026</div>
-    <p class="body" style="margin-bottom:8px">Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong></p>
+    <div class="d2" data-i18n="s9.title">Caso real · TuFisio · Sep 2026</div>
+    <p class="body" data-i18n="s9.sub" style="margin-bottom:8px">Validado end-to-end · <strong style="color:var(--navy)">16 Sep 2026</strong></p>
     <div class="stats" style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
       <div class="stat"><div class="stat-n">~$0.16</div><div class="stat-l">por DERCAS (Gemini)</div></div>
       <div class="stat"><div class="stat-n">0</div><div class="stat-l">servicios nuevos de coste fijo</div></div>
@@ -485,94 +480,94 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s10">
-  <div class="lbl"><div class="lbl-diamond"></div>Lo que hemos corregido</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s10.lbl">Lo que hemos corregido</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:64px">
-    <div class="d2">Del diseño al despliegue:<br>cinco ajustes</div>
+    <div class="d2" data-i18n="s10.title">Del diseño al despliegue:<br>cinco ajustes</div>
     <div class="ba-grid" style="margin-top:28px">
       <div class="ba">
-        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">Transcripción lenta (audio secuencial)</div></div>
-        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Gemini Flash con chunking en paralelo</div></div>
+        <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt">Transcripción lenta (audio secuencial)</div></div>
+        <div class="ba-after"><div class="ba-lbl red" data-i18n="shared.after">Después</div><div class="ba-txt">Gemini Flash con chunking en paralelo</div></div>
       </div>
       <div class="ba">
-        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt"><code>MAIL_TO</code> hardcodeado — un solo destinatario</div></div>
-        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Derivado del dueño de la carpeta en WorkDrive</div></div>
+        <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt"><code>MAIL_TO</code> hardcodeado — un solo destinatario</div></div>
+        <div class="ba-after"><div class="ba-lbl red" data-i18n="shared.after">Después</div><div class="ba-txt">Derivado del dueño de la carpeta en WorkDrive</div></div>
       </div>
       <div class="ba">
-        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">DERCAS sin validar si existe DERS base</div></div>
-        <div class="ba-after"><div class="ba-lbl red">Después</div><div class="ba-txt">Validación previa + aviso al consultor si falta el DERS</div></div>
+        <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt">DERCAS sin validar si existe DERS base</div></div>
+        <div class="ba-after"><div class="ba-lbl red" data-i18n="shared.after">Después</div><div class="ba-txt">Validación previa + aviso al consultor si falta el DERS</div></div>
       </div>
       <div class="ba">
-        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">PDF con formato provisional (no plantilla 2026)</div></div>
+        <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt">PDF con formato provisional (no plantilla 2026)</div></div>
         <div class="ba-after"><div class="ba-lbl red">Pendiente (cosmético)</div><div class="ba-txt">Ajuste de render a plantilla oficial 2026 — contenido ya correcto</div></div>
       </div>
       <div class="ba" style="grid-column:span 2">
-        <div class="ba-before"><div class="ba-lbl">Antes</div><div class="ba-txt">Entorno de prueba personal (<code>PruebasGabriel</code>, free tier)</div></div>
+        <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt">Entorno de prueba personal (<code>PruebasGabriel</code>, free tier)</div></div>
         <div class="ba-after"><div class="ba-lbl red">Roadmap</div><div class="ba-txt">Catalyst env Production con cuenta/servicio de equipo · Decisión de plan de facturación</div></div>
       </div>
     </div>
   </div>
 </div>
 <div class="slide" id="s11">
-  <div class="lbl"><div class="lbl-diamond"></div>Riesgos y mitigaciones</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s11.lbl">Riesgos y mitigaciones</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:64px">
-    <div class="d2">Cada riesgo tiene<br>su mitigación por diseño</div>
+    <div class="d2" data-i18n="s11.title">Cada riesgo tiene<br>su mitigación por diseño</div>
     <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Falsos positivos — requerimientos inventados</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Falsos positivos — requerimientos inventados</div></div>
         <div class="risk-arr">→</div>
-        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Trazabilidad obligatoria a reunión+minuto; lo no encontrado queda <code>[PENDIENTE]</code></div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">Trazabilidad obligatoria a reunión+minuto; lo no encontrado queda <code>[PENDIENTE]</code></div></div>
       </div>
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">DERCAS entregado sin revisión del consultor</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">DERCAS entregado sin revisión del consultor</div></div>
         <div class="risk-arr">→</div>
-        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">El flujo termina con PDF para revisión, nunca con despliegue automático</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">El flujo termina con PDF para revisión, nunca con despliegue automático</div></div>
       </div>
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Coste Gemini fuera de control</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Coste Gemini fuera de control</div></div>
         <div class="risk-arr">→</div>
-        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">~$0.16/DERCAS conocido; cron con rate limit configurable</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">~$0.16/DERCAS conocido; cron con rate limit configurable</div></div>
       </div>
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Vendor lock-in en Zoho Catalyst</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Vendor lock-in en Zoho Catalyst</div></div>
         <div class="risk-arr">→</div>
-        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Arquitectura desacoplada — AppSail, Functions y WorkDrive son sustituibles</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">Arquitectura desacoplada — AppSail, Functions y WorkDrive son sustituibles</div></div>
       </div>
       <div class="risk">
-        <div class="risk-p"><div class="r-lbl">Riesgo</div><div class="r-txt">Datos del cliente en el pipeline de IA</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.risk">Riesgo</div><div class="r-txt">Datos del cliente en el pipeline de IA</div></div>
         <div class="risk-arr">→</div>
-        <div class="risk-p"><div class="r-lbl">Mitigación</div><div class="r-txt">Sin PII en el JSON estructurado; grabaciones no se almacenan tras procesamiento</div></div>
+        <div class="risk-p"><div class="r-lbl" data-i18n="shared.mitigation">Mitigación</div><div class="r-txt">Sin PII en el JSON estructurado; grabaciones no se almacenan tras procesamiento</div></div>
       </div>
     </div>
   </div>
 </div>
 <div class="slide" id="s12">
-  <div class="lbl"><div class="lbl-diamond"></div>Aprendizajes</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s12.lbl">Aprendizajes</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:64px">
-    <div class="d2">Lo que nos ha enseñado<br>el primer caso real</div>
+    <div class="d2" data-i18n="s12.title">Lo que nos ha enseñado<br>el primer caso real</div>
     <div class="learn-grid">
       <div class="learn-item">
-        <div class="learn-q">¿Qué ha funcionado?</div>
+        <div class="learn-q" data-i18n="s12.q1">¿Qué ha funcionado?</div>
         <div class="learn-a">El pipeline de punta a punta sin intervención. La trazabilidad a reunión+minuto elimina la duda del consultor sobre el origen de cada requerimiento — nada se inventa, todo se puede verificar.</div>
       </div>
       <div class="learn-item">
-        <div class="learn-q">¿Qué hay que cambiar?</div>
+        <div class="learn-q" data-i18n="s12.q2">¿Qué hay que cambiar?</div>
         <div class="learn-a">El enrutado del aviso (hoy <code>MAIL_TO</code> hardcodeado → derivar del dueño de la carpeta). El formato PDF a la plantilla 2026. Una pasada <em>longform</em> en DERCAS para más profundidad por requerimiento.</div>
       </div>
       <div class="learn-item">
-        <div class="learn-q">¿Qué hemos descartado?</div>
+        <div class="learn-q" data-i18n="s12.q3">¿Qué hemos descartado?</div>
         <div class="learn-a">El MCP de Zoho para la Parametrización: bug de passthrough en lecturas, coste excesivo en tokens y escritura bloqueada. Reemplazado por <strong style="color:var(--navy)">REST v8 directa</strong>, más fiable y predecible.</div>
       </div>
     </div>
   </div>
 </div>
 <div class="slide" id="s13">
-  <div class="lbl"><div class="lbl-diamond"></div>Siguientes fases</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s13.lbl">Siguientes fases</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="margin-top:64px">
-    <div class="d2">Lo que viene — tres frentes</div>
+    <div class="d2" data-i18n="s13.title">Lo que viene — tres frentes</div>
     <div class="next-grid">
       <div class="next-card">
         <div class="next-n"><span class="next-diamond"></span>01</div>
@@ -593,15 +588,15 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   </div>
 </div>
 <div class="slide" id="s14">
-  <div class="lbl"><div class="lbl-diamond"></div>Equipo</div>
+  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s14.lbl">Equipo</span></div>
   <div class="aw"><img src="../../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:40px">
-    <div class="d2" style="text-align:center">Equipo</div>
+    <div class="d2" data-i18n="s14.title" style="text-align:center">Equipo</div>
     <div class="team-grid">
-      <div class="team-card"><div class="team-role">Product Owner</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role">Desarrollo / IA</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role">Consultor validador</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role">Sponsor</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role" data-i18n="s14.r1">Product Owner</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role" data-i18n="s14.r2">Desarrollo / IA</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role" data-i18n="s14.r3">Consultor validador</div><div class="team-name">—</div></div>
+      <div class="team-card"><div class="team-role" data-i18n="s14.r4">Sponsor</div><div class="team-name">—</div></div>
     </div>
   </div>
 </div>
@@ -628,30 +623,168 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 </div>
 
 <!-- NAV -->
-<div id="nav">
-  <button id="prev">←</button>
-  <span id="ctr">1 / 15</span>
-  <button id="next">→</button>
-  <span style="margin-left:8px;font-size:10px;opacity:.4">← →</span>
-</div>
+<nav class="nav">
+  <button id="prev" title="Anterior">‹</button>
+  <span class="cnt" id="cnt">1 / 15</span>
+  <button id="next" title="Siguiente">›</button>
+  <span class="kh">← →</span>
+  <span class="lang-sep"></span>
+  <button id="lang-toggle">ES</button>
+</nav>
 
 <script>
-const slides = document.querySelectorAll('.slide');
-let cur = 0;
-function go(n) {
-  slides[cur].classList.remove('active');
-  cur = (n + slides.length) % slides.length;
-  slides[cur].classList.add('active');
-  document.getElementById('ctr').textContent = (cur+1) + ' / ' + slides.length;
-  document.getElementById('nav').style.display = (cur === 0 || cur === slides.length-1) ? 'none' : 'flex';
-}
-document.getElementById('next').onclick = () => go(cur+1);
-document.getElementById('prev').onclick = () => go(cur-1);
-document.addEventListener('keydown', e => {
-  if(e.key==='ArrowRight'||e.key===' ') go(cur+1);
-  if(e.key==='ArrowLeft') go(cur-1);
-});
-go(0);
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const cnt = document.getElementById('cnt');
+  let cur = 0;
+  function go(n){
+    slides[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    cnt.textContent = (cur+1) + ' / ' + slides.length;
+  }
+  document.getElementById('next').onclick = () => go(cur+1);
+  document.getElementById('prev').onclick = () => go(cur-1);
+  document.addEventListener('keydown', e => {
+    if(e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') go(cur+1);
+    if(e.key === 'ArrowLeft'  || e.key === 'ArrowUp') go(cur-1);
+  });
+})();
+</script>
+<script>
+const i18n = {
+  es: {
+    'port.title':'DERS/DERCAS Automation','port.sub':'De la grabación al documento en minutos',
+    's15.title':'DERS/DERCAS Automation','s15.sub':'Suelta las grabaciones. El documento aparece solo.',
+    'idx.lbl':'Índice','idx.intro':'Lo que vamos a ver.',
+    'idx.01':'El objetivo','idx.02':'Problemas y soluciones','idx.03':'Arquitectura',
+    'idx.04':'Módulo DERS','idx.05':'Módulo DERCAS','idx.06':'Resultados DERS',
+    'idx.07':'Resultados DERCAS','idx.08':'Lo que hemos corregido',
+    'idx.09':'Riesgos y mitigaciones','idx.10':'Aprendizajes',
+    'idx.11':'Siguientes fases','idx.12':'Equipo',
+    's3.lbl':'El objetivo',
+    's3.big':'Convertir grabaciones de reuniones en documentación estructurada, <em>trazable y lista para revisar</em> — casi sola.',
+    's3.stat1':'6–7 h','s3.stat1l':'manuales hoy',
+    's3.stat2':'~2–3 h','s3.stat2l':'solo revisión',
+    's3.stat3':'100%','s3.stat3l':'trazabilidad a minuto',
+    's3.body':'El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.',
+    's3.body2':'revisa','s3.notranscribe':'no transcribe.',
+    's4.lbl':'Problemas y soluciones','s4.title':'La documentación se pierde y se inventa',
+    's4.li1':'6–7 h de trabajo manual por proyecto para redactar el DERS',
+    's4.li2':'Requerimientos inventados o sin trazabilidad a la reunión de origen',
+    's4.li3':'El DERCAS (viabilidad + criterios) se completa a mano o no se completa',
+    's4.p1':'Tiempo manual excesivo','s4.s1lbl':'Automatización',
+    's4.s1txt':'Generación automática desde las grabaciones — 2–3 h de revisión',
+    's4.p2':'Requerimientos inventados','s4.s2lbl':'Trazabilidad',
+    's4.s2txt':'0 falsos positivos — cada requerimiento apunta a reunión+minuto',
+    's4.p3':'Sin changelog','s4.s3lbl':'Corrección incremental',
+    's4.s3txt':'El consultor graba una corrección; el sistema aplica el diff con historial',
+    's4.p4':'DERCAS en blanco','s4.s4lbl':'Dictado → estructura',
+    's4.s4txt':'Viabilidad y criterios de aceptación desde la voz del consultor',
+    's4.p5':'Notificación manual','s4.s5lbl':'Disparo automático',
+    's4.s5txt':'WorkDrive trigger → PDF en carpeta de salida + email',
+    's4.p6':'Solo un consultor','s4.s6lbl':'Multi-usuario',
+    's4.s6txt':'Carpeta compartida de salida — escalado por consultor/cliente',
+    's5.lbl':'Arquitectura','s5.title':'Tres módulos encadenados.',
+    's6.lbl':'Módulo DERS — Fase 1','s6.title':'De las grabaciones al borrador en minutos',
+    's6.ci':'Corrección incremental',
+    's7.lbl':'Módulo DERCAS — Fase 2','s7.title':'El consultor dicta la solución. El sistema la estructura.',
+    's8.lbl':'Resultados DERS','s8.title':'Caso real · Jaque Legal · Sep 2026',
+    's8.sub':'Pipeline validado end-to-end con un caso real',
+    's9.lbl':'Resultados DERCAS','s9.title':'Caso real · TuFisio · Sep 2026',
+    's9.sub':'Validado end-to-end · 16 Sep 2026',
+    's10.lbl':'Lo que hemos corregido','s10.title':'Del diseño al despliegue: cinco ajustes',
+    's11.lbl':'Riesgos y mitigaciones','s11.title':'Cada riesgo tiene su mitigación por diseño',
+    's12.lbl':'Aprendizajes','s12.title':'Lo que nos ha enseñado el primer caso real',
+    's12.q1':'¿Qué ha funcionado?','s12.q2':'¿Qué hay que cambiar?','s12.q3':'¿Qué hemos descartado?',
+    's13.lbl':'Siguientes fases','s13.title':'Lo que viene — tres frentes',
+    's14.lbl':'Equipo','s14.title':'Equipo',
+    's14.r1':'Product Owner','s14.r2':'Desarrollo / IA','s14.r3':'Consultor validador','s14.r4':'Sponsor',
+    'shared.before':'Antes','shared.after':'Después','shared.risk':'Riesgo','shared.mitigation':'Mitigación'
+  },
+  en: {
+    'port.title':'DERS/DERCAS Automation','port.sub':'From recording to document in minutes',
+    's15.title':'DERS/DERCAS Automation','s15.sub':'Drop the recordings. The document appears on its own.',
+    'idx.lbl':'Index','idx.intro':"What we'll cover.",
+    'idx.01':'The objective','idx.02':'Problems and solutions','idx.03':'Architecture',
+    'idx.04':'DERS Module','idx.05':'DERCAS Module','idx.06':'DERS Results',
+    'idx.07':'DERCAS Results','idx.08':'What we fixed',
+    'idx.09':'Risks and mitigations','idx.10':'Learnings',
+    'idx.11':'Next phases','idx.12':'Team',
+    's3.lbl':'The objective',
+    's3.big':'Turn meeting recordings into structured documentation, <em>traceable and ready to review</em> — almost on its own.',
+    's3.stat1':'6–7 h','s3.stat1l':'manual today',
+    's3.stat2':'~2–3 h','s3.stat2l':'review only',
+    's3.stat3':'100%','s3.stat3l':'traceability to the minute',
+    's3.body':'The consultant uploads recordings. The system generates the DERS and DERCAS.',
+    's3.body2':'reviews','s3.notranscribe':"doesn't transcribe.",
+    's4.lbl':'Problems and solutions','s4.title':'Documentation gets lost and invented',
+    's4.li1':'6–7 hours of manual work per project to draft the DERS',
+    's4.li2':'Invented requirements or ones without traceability to their source meeting',
+    's4.li3':'The DERCAS (feasibility + criteria) is completed manually or not at all',
+    's4.p1':'Excessive manual time','s4.s1lbl':'Automation',
+    's4.s1txt':'Automatic generation from recordings — 2–3 h of review',
+    's4.p2':'Invented requirements','s4.s2lbl':'Traceability',
+    's4.s2txt':'0 false positives — every requirement points to meeting+minute',
+    's4.p3':'No changelog','s4.s3lbl':'Incremental correction',
+    's4.s3txt':'The consultant records a correction; the system applies the diff with changelog',
+    's4.p4':'Blank DERCAS','s4.s4lbl':'Dictation → structure',
+    's4.s4txt':'Feasibility and acceptance criteria from the consultant\'s voice',
+    's4.p5':'Manual notification','s4.s5lbl':'Automatic trigger',
+    's4.s5txt':'WorkDrive trigger → PDF in output folder + email',
+    's4.p6':'Single consultant','s4.s6lbl':'Multi-user',
+    's4.s6txt':'Shared output folder — scaled by consultant/client',
+    's5.lbl':'Architecture','s5.title':'Three chained modules.',
+    's6.lbl':'DERS Module — Phase 1','s6.title':'From recordings to draft in minutes',
+    's6.ci':'Incremental correction',
+    's7.lbl':'DERCAS Module — Phase 2','s7.title':'The consultant dictates the solution. The system structures it.',
+    's8.lbl':'DERS Results','s8.title':'Real case · Jaque Legal · Sep 2026',
+    's8.sub':'End-to-end validated pipeline with a real case',
+    's9.lbl':'DERCAS Results','s9.title':'Real case · TuFisio · Sep 2026',
+    's9.sub':'End-to-end validated · 16 Sep 2026',
+    's10.lbl':'What we fixed','s10.title':'From design to deployment: five adjustments',
+    's11.lbl':'Risks and mitigations','s11.title':'Every risk has its mitigation by design',
+    's12.lbl':'Learnings','s12.title':'What the first real case taught us',
+    's12.q1':'What worked?','s12.q2':'What needs to change?','s12.q3':'What did we rule out?',
+    's13.lbl':'Next phases','s13.title':'What comes next — three fronts',
+    's14.lbl':'Team','s14.title':'Team',
+    's14.r1':'Product Owner','s14.r2':'Development / AI','s14.r3':'Validation consultant','s14.r4':'Sponsor',
+    'shared.before':'Before','shared.after':'After','shared.risk':'Risk','shared.mitigation':'Mitigation'
+  }
+};
+(function(){
+  var STORAGE_KEY='derscas_lang', URL_PARAM='lang';
+  function getInitialLang(){
+    var url=new URLSearchParams(window.location.search).get(URL_PARAM);
+    if(url==='en'||url==='es') return url;
+    var stored=localStorage.getItem(STORAGE_KEY);
+    if(stored) return stored;
+    return navigator.language.startsWith('en')?'en':'es';
+  }
+  function applyLang(lang){
+    var dict=i18n[lang];
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var v=dict[el.dataset.i18n];
+      if(v!==undefined) el.textContent=v;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+      var v=dict[el.dataset.i18nHtml];
+      if(v!==undefined) el.innerHTML=v;
+    });
+    var btn=document.getElementById('lang-toggle');
+    btn.textContent=lang.toUpperCase();
+    btn.classList.toggle('en',lang==='en');
+    localStorage.setItem(STORAGE_KEY,lang);
+    history.replaceState(null,'',lang==='es'?window.location.pathname:'?lang=en');
+  }
+  var currentLang=getInitialLang();
+  document.getElementById('lang-toggle').addEventListener('click',function(){
+    currentLang=currentLang==='es'?'en':'es';
+    applyLang(currentLang);
+  });
+  if(currentLang!=='es') applyLang(currentLang);
+})();
 </script>
 </body>
 </html>
