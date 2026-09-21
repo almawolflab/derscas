@@ -292,11 +292,12 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
   <div class="two-col" style="margin-top:64px">
     <div>
-      <div class="d2" data-i18n="s4.title">El papeleo manual<br>frena el negocio</div>
+      <div class="d2" data-i18n="s4.title">El trabajo manual<br>ralentiza el negocio</div>
       <ul class="dlist" style="margin-top:20px">
         <li data-i18n="s4.li1">6–7 h de trabajo manual por proyecto para redactar el DERS</li>
         <li data-i18n="s4.li2">La documentación marca cuántos proyectos puedes atender y con qué margen</li>
-        <li data-i18n="s4.li3">El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
+        <li data-i18n="s4.li3">El DERCAS (viabilidad + criterios) se completa a mano</li>
+        <li data-i18n="s4.li4">Las implementaciones se hacen desde la UI</li>
       </ul>
     </div>
     <div class="prows">
@@ -306,7 +307,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <div><div class="ps-lbl" data-i18n="s4.s1lbl">Automatización</div><div class="ps-txt" data-i18n="s4.s1txt">Generación automática desde las grabaciones — 2–3 h de revisión</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp" data-i18n="s4.p2">Origen de cada requerimiento</div></div>
+        <div><div class="pp" data-i18n="s4.p2">Sin trazabilidad</div></div>
         <div class="pa">→</div>
         <div><div class="ps-lbl" data-i18n="s4.s2lbl">Trazabilidad</div><div class="ps-txt" data-i18n="s4.s2txt">Cada requerimiento apunta a la reunión y minuto exacto donde se discutió</div></div>
       </div>
@@ -316,9 +317,9 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <div><div class="ps-lbl" data-i18n="s4.s4lbl">Dictado → estructura</div><div class="ps-txt" data-i18n="s4.s4txt">Viabilidad y criterios de aceptación desde la voz del consultor</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp" data-i18n="s4.p5">Notificación manual</div></div>
+        <div><div class="pp" data-i18n="s4.p5">Sin avisos</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl" data-i18n="s4.s5lbl">Disparo automático</div><div class="ps-txt" data-i18n="s4.s5txt">WorkDrive trigger → PDF en carpeta de salida + email</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s5lbl">Avisos por correo</div><div class="ps-txt" data-i18n="s4.s5txt">Notificación automática cuando el DERS o DERCAS está listo en la carpeta de salida</div></div>
       </div>
       <div class="prow">
         <div><div class="pp" data-i18n="s4.p6">Solo un consultor</div></div>
@@ -331,9 +332,9 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <div><div class="ps-lbl" data-i18n="s4.s7lbl">Revisión IA</div><div class="ps-txt" data-i18n="s4.s7txt">Gemini revisa el DERS en 3 pasadas: generación → revisión → juez</div></div>
       </div>
       <div class="prow">
-        <div><div class="pp" data-i18n="s4.p8">Configuraciones en UI</div></div>
+        <div><div class="pp" data-i18n="s4.p8">Implementación manual</div></div>
         <div class="pa">→</div>
-        <div><div class="ps-lbl" data-i18n="s4.s8lbl">Implementación API</div><div class="ps-txt" data-i18n="s4.s8txt">Los requerimientos se mapean a la API v8 de Zoho — sin configuración manual</div></div>
+        <div><div class="ps-lbl" data-i18n="s4.s8lbl">Implementación API automatizada</div><div class="ps-txt" data-i18n="s4.s8txt">Los requerimientos se mapean a la API v8 de Zoho — sin configuración manual</div></div>
       </div>
       <div class="prow" style="border-bottom:none">
         <div><div class="pp" data-i18n="s4.p9">Sin visual de calidad</div></div>
@@ -691,23 +692,24 @@ const i18n = {
     's3.stat3':'18–22 h','s3.stat3l':'libera la automatización',
     's3.body':'El consultor sube las grabaciones. El sistema genera el DERS y el DERCAS.',
     's3.body3':'El consultor <strong style="color:var(--navy)">revisa</strong>, no transcribe.',
-    's4.lbl':'Problemas y soluciones','s4.title':'El papeleo manual frena el negocio',
+    's4.lbl':'Problemas y soluciones','s4.title':'El trabajo manual ralentiza el negocio',
     's4.li1':'6–7 h de trabajo manual por proyecto para redactar el DERS',
     's4.li2':'La documentación marca cuántos proyectos puedes atender y con qué margen',
-    's4.li3':'El DERCAS (viabilidad + criterios) se completa a mano o no se completa',
+    's4.li3':'El DERCAS (viabilidad + criterios) se completa a mano',
+    's4.li4':'Las implementaciones se hacen desde la UI',
     's4.p1':'Tiempo manual excesivo','s4.s1lbl':'Automatización',
     's4.s1txt':'Generación automática desde las grabaciones — 2–3 h de revisión',
-    's4.p2':'Origen de cada requerimiento','s4.s2lbl':'Trazabilidad',
+    's4.p2':'Sin trazabilidad','s4.s2lbl':'Trazabilidad',
     's4.s2txt':'Cada requerimiento apunta a la reunión y minuto exacto donde se discutió',
     's4.p4':'DERCAS en blanco','s4.s4lbl':'Dictado → estructura',
     's4.s4txt':'Viabilidad y criterios de aceptación desde la voz del consultor',
-    's4.p5':'Notificación manual','s4.s5lbl':'Disparo automático',
-    's4.s5txt':'WorkDrive trigger → PDF en carpeta de salida + email',
+    's4.p5':'Sin avisos','s4.s5lbl':'Avisos por correo',
+    's4.s5txt':'Notificación automática cuando el DERS o DERCAS está listo en la carpeta de salida',
     's4.p6':'Solo un consultor','s4.s6lbl':'Multi-usuario',
     's4.s6txt':'Carpeta compartida de salida — escalado por consultor/cliente',
     's4.p7':'Errores u Olvidos','s4.s7lbl':'Revisión IA',
     's4.s7txt':'Gemini revisa el DERS en 3 pasadas: generación → revisión → juez',
-    's4.p8':'Configuraciones en UI','s4.s8lbl':'Implementación API',
+    's4.p8':'Implementación manual','s4.s8lbl':'Implementación API automatizada',
     's4.s8txt':'Los requerimientos se mapean a la API v8 de Zoho — sin configuración manual',
     's4.p9':'Sin visual de calidad','s4.s9lbl':'Estadística de calidad juez',
     's4.s9txt':'El juez puntúa cada requerimiento — métrica de confianza por DERS',
@@ -744,23 +746,24 @@ const i18n = {
     's3.stat3':'18–22 h','s3.stat3l':'freed by automation',
     's3.body':'The consultant uploads recordings. The system generates the DERS and DERCAS.',
     's3.body3':'The consultant <strong style="color:var(--navy)">reviews</strong>, doesn\'t transcribe.',
-    's4.lbl':'Problems and solutions','s4.title':'Manual paperwork slows the business',
+    's4.lbl':'Problems and solutions','s4.title':'Manual work slows the business',
     's4.li1':'6–7 hours of manual work per project to draft the DERS',
     's4.li2':'Documentation determines how many projects you can take on and at what margin',
-    's4.li3':'The DERCAS (feasibility + criteria) is completed manually or not at all',
+    's4.li3':'The DERCAS (feasibility + criteria) is completed manually',
+    's4.li4':'Implementations are done from the UI',
     's4.p1':'Excessive manual time','s4.s1lbl':'Automation',
     's4.s1txt':'Automatic generation from recordings — 2–3 h of review',
-    's4.p2':'Origin of each requirement','s4.s2lbl':'Traceability',
+    's4.p2':'No traceability','s4.s2lbl':'Traceability',
     's4.s2txt':'Every requirement points to the exact meeting and minute where it was discussed',
     's4.p4':'Blank DERCAS','s4.s4lbl':'Dictation → structure',
     's4.s4txt':'Feasibility and acceptance criteria from the consultant\'s voice',
-    's4.p5':'Manual notification','s4.s5lbl':'Automatic trigger',
-    's4.s5txt':'WorkDrive trigger → PDF in output folder + email',
+    's4.p5':'No notifications','s4.s5lbl':'Email notifications',
+    's4.s5txt':'Automatic notification when the DERS or DERCAS is ready in the output folder',
     's4.p6':'Single consultant','s4.s6lbl':'Multi-user',
     's4.s6txt':'Shared output folder — scaled by consultant/client',
     's4.p7':'Errors or Oversights','s4.s7lbl':'AI Review',
     's4.s7txt':'Gemini reviews the DERS in 3 passes: generation → review → judge',
-    's4.p8':'UI Configuration','s4.s8lbl':'API Implementation',
+    's4.p8':'Manual implementation','s4.s8lbl':'Automated API implementation',
     's4.s8txt':'Requirements mapped to Zoho API v8 — no manual configuration',
     's4.p9':'No quality visibility','s4.s9lbl':'Judge quality metrics',
     's4.s9txt':'The judge scores each requirement — confidence metric per DERS',
