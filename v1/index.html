@@ -190,7 +190,7 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .risk-p .r-txt { font-size: 12.5px; color: var(--navy); line-height: 1.4; }
 .risk-arr { color: var(--red); font-size: 18px; align-self: center; }
 
-.next-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 32px; }
+.next-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 28px; }
 .next-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
 .next-n { font-size: 11px; font-weight: 700; color: var(--red); letter-spacing: .08em; margin-bottom: 10px; }
 .next-diamond { display: inline-block; width: 8px; height: 8px; background: var(--red); transform: rotate(45deg); margin-right: 6px; }
@@ -604,8 +604,8 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s13">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s13.lbl">Siguientes fases</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="margin-top:64px">
-    <div class="d2" data-i18n="s13.title">Lo que viene — tres frentes</div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="d2" data-i18n="s13.title">Lo que viene — cuatro frentes</div>
     <div class="next-grid">
       <div class="next-card">
         <div class="next-n"><span class="next-diamond"></span>01</div>
@@ -619,6 +619,11 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
       </div>
       <div class="next-card">
         <div class="next-n"><span class="next-diamond"></span>03</div>
+        <div class="next-title">Consultor revisor</div>
+        <div class="next-body">DERS entregado en Word editable — el consultor corrige el borrador antes de cerrar el PDF · Correcciones grabadas como instrucción de voz (diff incremental aplicado al draft) · Parametrización con paso de aprobación explícito en sandbox antes de ejecutar en producción</div>
+      </div>
+      <div class="next-card">
+        <div class="next-n"><span class="next-diamond"></span>04</div>
         <div class="next-title">Parametrización</div>
         <div class="next-body">Traducir el DERCAS cerrado a configuración ejecutable en Zoho CRM via REST v8 · Siempre en sandbox · Aprobación humana antes de producción · Campos, picklists, workflows, blueprints, roles y perfiles</div>
       </div>
@@ -736,7 +741,7 @@ const i18n = {
     's11.lbl':'Riesgos y mitigaciones','s11.title':'Cada riesgo tiene su mitigación por diseño',
     's12.lbl':'Aprendizajes','s12.title':'Lo que nos ha enseñado el primer caso real',
     's12.q1':'¿Qué ha funcionado?','s12.q2':'¿Qué hay que cambiar?','s12.q3':'¿Qué hemos descartado?',
-    's13.lbl':'Siguientes fases','s13.title':'Lo que viene — tres frentes',
+    's13.lbl':'Siguientes fases','s13.title':'Lo que viene — cuatro frentes',
     's14.lbl':'Equipo','s14.title':'Equipo',
     's14.r1':'Product Owner','s14.r2':'Desarrollo / IA','s14.r3':'Consultor validador','s14.r4':'Sponsor',
     'shared.before':'Antes','shared.after':'Después','shared.risk':'Riesgo','shared.mitigation':'Mitigación'
@@ -791,7 +796,7 @@ const i18n = {
     's11.lbl':'Risks and mitigations','s11.title':'Every risk has its mitigation by design',
     's12.lbl':'Learnings','s12.title':'What the first real case taught us',
     's12.q1':'What worked?','s12.q2':'What needs to change?','s12.q3':'What did we rule out?',
-    's13.lbl':'Next phases','s13.title':'What comes next — three fronts',
+    's13.lbl':'Next phases','s13.title':'What comes next — four fronts',
     's14.lbl':'Team','s14.title':'Team',
     's14.r1':'Product Owner','s14.r2':'Development / AI','s14.r3':'Validation consultant','s14.r4':'Sponsor',
     'shared.before':'Before','shared.after':'After','shared.risk':'Risk','shared.mitigation':'Mitigation'
