@@ -176,10 +176,11 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .flow-name { font-size: 13px; font-weight: 600; margin-top: 4px; }
 .flow-arr { color: var(--red); font-size: 20px; padding: 0 8px; flex-shrink: 0; }
 
-.ba-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 24px; }
-.ba { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-.ba-before { padding: 12px 14px; border-bottom: 1px solid var(--border); }
-.ba-after { padding: 12px 14px; background: rgba(193,59,47,.04); }
+.ba-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 24px; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.ba-before { padding: 16px 20px; background: rgba(237,236,235,.55); border-right: 1px solid var(--border); }
+.ba-after { padding: 16px 20px; }
+.ba-txt { font-size: 13px; color: var(--navy); line-height: 1.5; margin-top: 5px; }
 .ba-lbl { font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
 .ba-lbl.red { color: var(--red); }
 .ba-txt { font-size: 12.5px; color: var(--navy); line-height: 1.4; }
@@ -520,9 +521,9 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s10">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s10.lbl">Lo que hemos corregido</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="margin-top:64px">
-    <div class="d2" data-i18n="s10.title">Del diseño al despliegue:<br>cinco ajustes</div>
-    <div class="ba-grid" style="margin-top:28px">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="d2" data-i18n="s10.title">Del diseño al despliegue: cinco ajustes</div>
+    <div class="ba-grid">
       <div class="ba">
         <div class="ba-before"><div class="ba-lbl" data-i18n="shared.before">Antes</div><div class="ba-txt">Transcripción lenta (audio secuencial)</div></div>
         <div class="ba-after"><div class="ba-lbl red" data-i18n="shared.after">Después</div><div class="ba-txt">Gemini Flash con chunking en paralelo</div></div>
