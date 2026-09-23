@@ -210,15 +210,15 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .team-role { font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
 .team-name { font-size: 15px; font-weight: 600; color: var(--navy); }
 
-.learn-grid{display:flex;flex-direction:column;gap:28px;margin-top:32px;max-width:880px}
-.learn-item{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start}
-.learn-q{font-size:9px;font-weight:700;letter-spacing:.14em;color:var(--red);text-transform:uppercase;padding-top:3px;line-height:1.4}
-.learn-a{font-size:13px;color:var(--navy);line-height:1.65}
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.learn-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px 22px}
+.learn-q{font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--red);text-transform:uppercase;margin-bottom:10px;line-height:1.4}
+.learn-a{font-size:13px;color:var(--navy);line-height:1.6}
 
 code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; background: rgba(193,59,47,.1); color: var(--red); padding: 1px 5px; border-radius: 3px; }
 #s3 .d1 { font-size: clamp(20px, 2.2vw, 32px); }
+#s10 .d2 { font-size: clamp(20px, 2.2vw, 34px); }
 #s12 .d2 { font-size: clamp(20px, 2vw, 30px); }
-#s12 .learn-grid { margin-top: 16px; }
 
 </style>
 </head>
@@ -259,10 +259,10 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     <div class="idx-row"><span class="idx-n">04</span><span data-i18n="idx.04">Módulo DERS</span></div>
     <div class="idx-row"><span class="idx-n">11</span><span data-i18n="idx.11">Siguientes fases</span></div>
     <div class="idx-row"><span class="idx-n">05</span><span data-i18n="idx.05">Módulo DERCAS</span></div>
-    <div class="idx-row"><span class="idx-n">12</span><span data-i18n="idx.12">Equipo</span></div>
+    <div class="idx-row" style="border-bottom:none"></div>
     <div class="idx-row"><span class="idx-n">06</span><span data-i18n="idx.06">Resultados DERS</span></div>
-    <div class="idx-row"><span class="idx-n">13</span>Demo</div>
-    <div class="idx-row"><span class="idx-n">07</span><span data-i18n="idx.07">Resultados DERCAS</span></div>
+    <div class="idx-row" style="border-bottom:none"></div>
+    <div class="idx-row" style="border-bottom:none"><span class="idx-n">07</span><span data-i18n="idx.07">Resultados DERCAS</span></div>
     <div class="idx-row" style="border-bottom:none"></div>
   </div>
 </div>
@@ -631,35 +631,6 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
     </div>
   </div>
 </div>
-<div class="slide" id="s14">
-  <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s14.lbl">Equipo</span></div>
-  <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:40px">
-    <div class="d2" data-i18n="s14.title" style="text-align:center">Equipo</div>
-    <div class="team-grid">
-      <div class="team-card"><div class="team-role" data-i18n="s14.r1">Product Owner</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role" data-i18n="s14.r2">Desarrollo / IA</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role" data-i18n="s14.r3">Consultor validador</div><div class="team-name">—</div></div>
-      <div class="team-card"><div class="team-role" data-i18n="s14.r4">Sponsor</div><div class="team-name">—</div></div>
-    </div>
-  </div>
-</div>
-<div class="slide" id="s15">
-  <div class="port-bg">
-    <div class="port-gray"></div>
-    <div class="port-red"></div>
-  </div>
-  <div class="port-content">
-    <div class="wave">
-      <span style="height:18px"></span><span style="height:30px"></span><span style="height:14px"></span>
-      <span style="height:38px"></span><span style="height:22px"></span><span style="height:26px"></span>
-      <span style="height:16px"></span><span style="height:40px"></span>
-    </div>
-    <div class="port-title" data-i18n="s15.title">DERS/DERCAS Automation</div>
-    <div class="port-sub" data-i18n="s15.sub">Suelta las grabaciones. El documento aparece solo.</div>
-    <img src="../logo-almawolf-lab.svg" alt="AlmaWolf" style="height:28px;display:block">
-  </div>
-</div>
 
 <!-- NAV -->
 <nav class="nav">
@@ -676,6 +647,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
   const slides = document.querySelectorAll('.slide');
   const cnt = document.getElementById('cnt');
   let cur = 0;
+  cnt.textContent = '1 / ' + slides.length;
   function go(n){
     slides[cur].classList.remove('active');
     cur = (n + slides.length) % slides.length;
