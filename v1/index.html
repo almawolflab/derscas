@@ -376,75 +376,130 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s5">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s5.lbl">Arquitectura</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
-    <div class="d2" data-i18n="s5.title" style="font-size:clamp(20px,2.4vw,34px)">Tres módulos encadenados.</div>
-    <div class="arch">
-      <!-- ENTRADA -->
-      <div class="arch-col">
-        <div class="arch-box">
-          <div class="arch-hd">Entrada</div>
-          <div style="font-size:13px;font-weight:600;color:var(--navy);line-height:1.35">🎙 Meeting<br>con cliente</div>
-          <div class="arch-div"></div>
-          <div class="arch-sub">Transcripción + speaker ID <span style="color:var(--red);font-size:8px;font-weight:700;font-style:normal">en paralelo</span></div>
-          <div class="arch-div"></div>
-          <div style="font-size:10px;font-weight:600;color:var(--red);background:rgba(193,59,47,.08);display:inline-block;padding:2px 8px;border-radius:4px">Transcript</div>
-        </div>
-      </div>
-      <!-- → -->
-      <div class="arch-arr">→</div>
-      <!-- M1 DERS -->
-      <div class="arch-col">
-        <div class="arch-box">
-          <div class="arch-hd">Módulo 1 — DERS</div>
-          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">Transcript</span></div>
-          <div class="arch-div"></div>
-          <div class="arch-agents">
-            <div class="arch-agent">Generación</div>
-            <div class="arch-aarr">→</div>
-            <div class="arch-agent">Review</div>
-            <div class="arch-aarr">→</div>
-            <div class="arch-agent">Juez</div>
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+    <div style="margin:0 auto;zoom:0.57;flex-shrink:0;font-family:Inter,Helvetica,Arial,sans-serif;color:rgb(32,33,36)">
+      <div style="display:flex;flex-direction:column;align-items:center">
+
+        <!-- Entrada -->
+        <div style="width:1000px;box-sizing:border-box;background:rgb(241,243,244);border:1px solid rgb(218,220,224);border-radius:14px;padding:26px 32px">
+          <div style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgb(95,99,104);margin-bottom:18px">Entrada</div>
+          <div style="display:flex;align-items:center;gap:18px">
+            <div style="flex:1 1 0%;background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:12px">
+              <div style="width:34px;height:34px;border-radius:50%;background:rgb(95,99,104);display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:12px;height:12px;border-radius:50%;background:rgb(255,255,255)"></div></div>
+              <div style="font-size:16px;font-weight:500">Meeting con cliente</div>
+            </div>
+            <svg width="40" height="20" viewBox="0 0 40 20"><path d="M0 10 L30 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M40 10 L28 4 L28 16 Z" fill="#9aa0a6"></path></svg>
+            <div style="flex:1.4 1 0%;background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 18px">
+              <div style="font-size:16px;font-weight:500">Transcripción + identificación de hablante</div>
+              <div style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;color:rgb(95,99,104);margin-top:4px">en paralelo</div>
+            </div>
+            <svg width="40" height="20" viewBox="0 0 40 20"><path d="M0 10 L30 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M40 10 L28 4 L28 16 Z" fill="#9aa0a6"></path></svg>
+            <div style="background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 22px;font-family:'SF Mono','Fira Code',monospace;font-size:15px;font-weight:500">Transcript</div>
           </div>
-          <div class="arch-retry">↻ &lt;70 → retry &nbsp;·&nbsp; Plantilla 2026</div>
-          <div class="arch-div"></div>
-          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">JSON campo/plantilla</span></div>
-          <div class="arch-io" style="margin-top:3px"><span class="arch-badge out">OUT</span><span class="arch-txt">PDF borrador</span></div>
         </div>
-      </div>
-      <!-- → -->
-      <div class="arch-arr">→</div>
-      <!-- M2 DERCAS -->
-      <div class="arch-col">
-        <div class="arch-box">
-          <div class="arch-hd">Módulo 2 — DERCAS</div>
-          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">DERS</span></div>
-          <div class="arch-io" style="margin-top:3px"><span class="arch-badge in">IN</span><span class="arch-txt">🎙 Audios consultor</span></div>
-          <div class="arch-div"></div>
-          <div class="arch-sub">Transcripción<br>Extracción datos DERS</div>
-          <div class="arch-div"></div>
-          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">DERCAS PDF</span></div>
+
+        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
+
+        <!-- MÓDULO 1 — DERS -->
+        <div style="width:1000px;box-sizing:border-box;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px">
+            <div style="display:flex;align-items:baseline;gap:12px">
+              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 1</span>
+              <span style="font-size:22px;font-weight:700">DERS</span>
+            </div>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;background:rgb(241,243,244);border-radius:100px;padding:5px 12px;color:rgb(60,64,67)">Plantilla 2026</span>
+          </div>
+          <div style="position:relative;width:936px;height:196px">
+            <div style="position:absolute;left:0;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+              <div style="font-size:17px;font-weight:700">Generación</div>
+              <div style="font-size:13px;color:rgb(95,99,104)">Mapeo a la plantilla</div>
+            </div>
+            <svg width="78" height="20" viewBox="0 0 78 20" style="position:absolute;left:260px;top:45px"><path d="M8 10 L62 10" stroke="#c5221f" stroke-width="2" fill="none"></path><path d="M72 10 L60 4 L60 16 Z" fill="#c5221f"></path></svg>
+            <div style="position:absolute;left:338px;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+              <div style="font-size:17px;font-weight:700">Review</div>
+              <div style="font-size:13px;color:rgb(95,99,104)">Enriquecimiento del borrador</div>
+            </div>
+            <svg width="78" height="20" viewBox="0 0 78 20" style="position:absolute;left:598px;top:45px"><path d="M8 10 L62 10" stroke="#c5221f" stroke-width="2" fill="none"></path><path d="M72 10 L60 4 L60 16 Z" fill="#c5221f"></path></svg>
+            <div style="position:absolute;left:676px;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+              <div style="font-size:17px;font-weight:700">Juez de calidad</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;background:rgb(230,244,234);color:rgb(24,128,56);border-radius:100px;padding:3px 10px;font-weight:600">≥ 70 → continúa</span>
+              </div>
+            </div>
+            <svg width="936" height="86" viewBox="0 0 936 86" style="position:absolute;left:0;top:110px">
+              <path d="M806 0 L806 50 L130 50 L130 12" stroke="#c5221f" stroke-width="2" stroke-dasharray="6 5" fill="none"></path>
+              <path d="M130 2 L123 14 L137 14 Z" fill="#c5221f"></path>
+            </svg>
+            <div style="position:absolute;left:398px;top:146px;background:rgb(255,255,255);padding:2px 12px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">&lt; 70 → retry</div>
+          </div>
+          <div style="border-top:1px solid rgb(232,234,237);margin-top:8px;padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(232,240,254);color:rgb(23,78,166);border-radius:100px;padding:6px 14px;font-weight:500">JSON campo / plantilla</span>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">PDF borrador</span>
+          </div>
         </div>
-      </div>
-      <!-- → -->
-      <div class="arch-arr">→</div>
-      <!-- M3 PARAMETRIZACIÓN -->
-      <div class="arch-col">
-        <div class="arch-box">
-          <div class="arch-hd">Módulo 3 — Parametrización</div>
-          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">DERCAS</span></div>
-          <div class="arch-div"></div>
-          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">JSON mapeo CRM</span></div>
-          <div class="arch-io" style="margin-top:3px"><span class="arch-badge out">OUT</span><span class="arch-txt">Resumen implementación</span></div>
+
+        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
+
+        <!-- MÓDULO 2 — DERCAS con Segunda entrada -->
+        <div style="width:1000px;position:relative">
+          <div style="width:620px;box-sizing:border-box;margin:0 auto;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px">
+              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 2</span>
+              <span style="font-size:22px;font-weight:700">DERCAS</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px">
+              <div style="display:flex;align-items:center;gap:12px;font-size:16px"><div style="width:6px;height:6px;border-radius:50%;background:rgb(197,34,31);flex-shrink:0"></div>Transcripción de los audios del consultor</div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:16px"><div style="width:6px;height:6px;border-radius:50%;background:rgb(197,34,31);flex-shrink:0"></div>Extracción de datos del DERS</div>
+            </div>
+            <div style="border-top:1px solid rgb(232,234,237);padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
+              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">DERCAS PDF</span>
+              <span style="font-size:12px;color:rgb(128,134,139)">sin JSON intermedio</span>
+            </div>
+          </div>
+          <div style="position:absolute;left:810px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:0">
+            <svg width="70" height="20" viewBox="0 0 70 20"><path d="M70 10 L12 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M2 10 L14 4 L14 16 Z" fill="#9aa0a6"></path></svg>
+            <div style="width:250px;box-sizing:border-box;background:rgb(241,243,244);border:1px solid rgb(218,220,224);border-radius:12px;padding:18px 20px">
+              <div style="font-family:'SF Mono','Fira Code',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgb(95,99,104);margin-bottom:10px">Segunda entrada</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:30px;height:30px;border-radius:50%;background:rgb(95,99,104);display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:rgb(255,255,255)"></div></div>
+                <div style="font-size:16px;font-weight:500">Audios del consultor</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- → -->
-      <div class="arch-arr">→</div>
-      <!-- CRM -->
-      <div class="arch-col">
-        <div class="arch-box" style="background:var(--navy);border-color:var(--navy);text-align:center">
-          <div class="arch-hd" style="color:rgba(255,255,255,.45)">Destino</div>
-          <div style="font-size:13px;font-weight:700;color:var(--white);margin-top:4px">Zoho CRM</div>
+
+        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
+
+        <!-- MÓDULO 3 — Parametrización -->
+        <div style="width:620px;box-sizing:border-box;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px">
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 3</span>
+            <span style="font-size:22px;font-weight:700">Parametrización</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+            <span style="font-size:13px;color:rgb(95,99,104)">Input</span>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(241,243,244);border-radius:100px;padding:6px 14px;font-weight:500">DERCAS</span>
+          </div>
+          <div style="border-top:1px solid rgb(232,234,237);padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(232,240,254);color:rgb(23,78,166);border-radius:100px;padding:6px 14px;font-weight:500">JSON mapeo CRM + plantilla</span>
+            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">Resumen de implementación</span>
+          </div>
         </div>
+
+        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
+
+        <!-- Destino — Zoho CRM -->
+        <div style="width:420px;box-sizing:border-box;background:rgb(13,27,62);border-radius:14px;padding:26px 32px;display:flex;align-items:center;justify-content:center;gap:14px">
+          <div style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center"><div style="width:12px;height:12px;border-radius:3px;background:rgb(255,255,255)"></div></div>
+          <div>
+            <div style="font-family:'SF Mono','Fira Code',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgb(170,180,200)">Destino</div>
+            <div style="font-size:22px;font-weight:700;color:rgb(255,255,255)">Zoho CRM</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
