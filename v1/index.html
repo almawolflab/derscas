@@ -198,6 +198,24 @@ body { font-family: var(--f); background: var(--bg); overflow: hidden; }
 .next-title { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .next-body { font-size: 13px; color: var(--gray); line-height: 1.6; }
 
+/* ── ARCHITECTURE DIAGRAM (S5) ── */
+.arch{display:grid;grid-template-columns:148px 22px 1fr 22px 1fr 22px 1fr 22px 96px;align-items:start;gap:0;margin-top:20px}
+.arch-col{display:flex;flex-direction:column}
+.arch-box{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.arch-hd{font-size:7.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.arch-div{height:1px;background:var(--border);margin:8px 0}
+.arch-io{display:flex;align-items:baseline;gap:5px;margin-top:3px}
+.arch-badge{font-size:7px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:1px 5px;border-radius:3px;flex-shrink:0;line-height:1.6}
+.arch-badge.in{background:rgba(107,114,128,.1);color:var(--gray)}
+.arch-badge.out{background:rgba(193,59,47,.1);color:var(--red)}
+.arch-txt{font-size:11.5px;color:var(--navy);line-height:1.4}
+.arch-agents{display:flex;align-items:center;gap:3px;flex-wrap:nowrap;margin:4px 0}
+.arch-agent{font-size:9.5px;font-weight:600;color:var(--navy);background:rgba(28,28,46,.07);padding:4px 8px;border-radius:4px;white-space:nowrap}
+.arch-aarr{color:var(--red);font-size:10px;flex-shrink:0}
+.arch-retry{font-size:8.5px;color:var(--gray);font-style:italic;margin-top:3px}
+.arch-arr{color:var(--red);font-size:16px;text-align:center;align-self:center}
+.arch-sub{font-size:10.5px;color:var(--gray);line-height:1.5}
+
 .dlist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
 .dlist li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: var(--navy); }
 .dlist li::before { content: ''; width: 7px; height: 7px; background: var(--red); transform: rotate(45deg); flex-shrink: 0; margin-top: 5px; }
@@ -358,42 +376,75 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s5">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s5.lbl">Arquitectura</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
-    <div class="d2" data-i18n="s5.title">Tres módulos encadenados.</div>
-    <div class="flow" style="margin:0">
-      <div class="flow-box">
-        <div class="flow-lbl">Entrada</div>
-        <div class="flow-name">🎙️ Grabaciones</div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="d2" data-i18n="s5.title" style="font-size:clamp(20px,2.4vw,34px)">Tres módulos encadenados.</div>
+    <div class="arch">
+      <!-- ENTRADA -->
+      <div class="arch-col">
+        <div class="arch-box">
+          <div class="arch-hd">Entrada</div>
+          <div style="font-size:13px;font-weight:600;color:var(--navy);line-height:1.35">🎙 Meeting<br>con cliente</div>
+          <div class="arch-div"></div>
+          <div class="arch-sub">Transcripción + speaker ID <span style="color:var(--red);font-size:8px;font-weight:700;font-style:normal">en paralelo</span></div>
+          <div class="arch-div"></div>
+          <div style="font-size:10px;font-weight:600;color:var(--red);background:rgba(193,59,47,.08);display:inline-block;padding:2px 8px;border-radius:4px">Transcript</div>
+        </div>
       </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box red">
-        <div class="flow-lbl">Módulo 1 · Producción</div>
-        <div class="flow-name">DERS</div>
+      <!-- → -->
+      <div class="arch-arr">→</div>
+      <!-- M1 DERS -->
+      <div class="arch-col">
+        <div class="arch-box">
+          <div class="arch-hd">Módulo 1 — DERS</div>
+          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">Transcript</span></div>
+          <div class="arch-div"></div>
+          <div class="arch-agents">
+            <div class="arch-agent">Generación</div>
+            <div class="arch-aarr">→</div>
+            <div class="arch-agent">Review</div>
+            <div class="arch-aarr">→</div>
+            <div class="arch-agent">Juez</div>
+          </div>
+          <div class="arch-retry">↻ &lt;70 → retry &nbsp;·&nbsp; Plantilla 2026</div>
+          <div class="arch-div"></div>
+          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">JSON campo/plantilla</span></div>
+          <div class="arch-io" style="margin-top:3px"><span class="arch-badge out">OUT</span><span class="arch-txt">PDF borrador</span></div>
+        </div>
       </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box">
-        <div class="flow-lbl">Salida 1</div>
-        <div class="flow-name">📄 DERS PDF</div>
+      <!-- → -->
+      <div class="arch-arr">→</div>
+      <!-- M2 DERCAS -->
+      <div class="arch-col">
+        <div class="arch-box">
+          <div class="arch-hd">Módulo 2 — DERCAS</div>
+          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">DERS</span></div>
+          <div class="arch-io" style="margin-top:3px"><span class="arch-badge in">IN</span><span class="arch-txt">🎙 Audios consultor</span></div>
+          <div class="arch-div"></div>
+          <div class="arch-sub">Transcripción<br>Extracción datos DERS</div>
+          <div class="arch-div"></div>
+          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">DERCAS PDF</span></div>
+        </div>
       </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box red">
-        <div class="flow-lbl">Módulo 2 · Piloto</div>
-        <div class="flow-name">DERCAS</div>
+      <!-- → -->
+      <div class="arch-arr">→</div>
+      <!-- M3 PARAMETRIZACIÓN -->
+      <div class="arch-col">
+        <div class="arch-box">
+          <div class="arch-hd">Módulo 3 — Parametrización</div>
+          <div class="arch-io"><span class="arch-badge in">IN</span><span class="arch-txt">DERCAS</span></div>
+          <div class="arch-div"></div>
+          <div class="arch-io"><span class="arch-badge out">OUT</span><span class="arch-txt">JSON mapeo CRM</span></div>
+          <div class="arch-io" style="margin-top:3px"><span class="arch-badge out">OUT</span><span class="arch-txt">Resumen implementación</span></div>
+        </div>
       </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box">
-        <div class="flow-lbl">Salida 2</div>
-        <div class="flow-name">📋 DERCAS PDF</div>
-      </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box dim">
-        <div class="flow-lbl">Módulo 3 · Investigación</div>
-        <div class="flow-name">Parametrización</div>
-      </div>
-      <div class="flow-arr">→</div>
-      <div class="flow-box light">
-        <div class="flow-lbl">Destino</div>
-        <div class="flow-name">⚙️ Zoho CRM</div>
+      <!-- → -->
+      <div class="arch-arr">→</div>
+      <!-- CRM -->
+      <div class="arch-col">
+        <div class="arch-box" style="background:var(--navy);border-color:var(--navy);text-align:center">
+          <div class="arch-hd" style="color:rgba(255,255,255,.45)">Destino</div>
+          <div style="font-size:13px;font-weight:700;color:var(--white);margin-top:4px">Zoho CRM</div>
+        </div>
       </div>
     </div>
   </div>
