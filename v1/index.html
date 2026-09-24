@@ -302,14 +302,22 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s4">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s4.lbl">Problemas identificados</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="margin-top:64px;max-width:700px">
-    <div class="d2" data-i18n="s4.title">El trabajo manual<br>ralentiza el negocio</div>
-    <ul class="dlist" style="margin-top:20px">
-      <li data-i18n="s4.li1">6–7 h de trabajo manual por proyecto para redactar el DERS</li>
-      <li data-i18n="s4.li2">La documentación marca cuántos proyectos puedes atender y con qué margen</li>
-      <li data-i18n="s4.li3">El DERCAS (viabilidad + criterios) se completa a mano</li>
-      <li data-i18n="s4.li4">Las implementaciones se hacen desde la UI</li>
-    </ul>
+  <div style="flex:1;display:flex;align-items:center;gap:80px;margin-top:64px">
+    <div style="flex:0 0 360px">
+      <div class="d2" data-i18n="s4.title">El trabajo manual<br>ralentiza el negocio</div>
+      <p class="body" style="margin-top:20px;font-size:15px;line-height:1.65;color:var(--gray)" data-i18n="s4.desc">La documentación de cada proyecto consume horas de trabajo artesanal que no escala ni deja trazabilidad.</p>
+    </div>
+    <div style="flex:1">
+      <ul class="dlist">
+        <li data-i18n="s4.li1">6–7 h de trabajo manual por proyecto para redactar el DERS</li>
+        <li data-i18n="s4.li2">La documentación determina cuántos proyectos puedes atender y con qué margen</li>
+        <li data-i18n="s4.li3">Requerimientos sin trazabilidad a la reunión donde se discutieron</li>
+        <li data-i18n="s4.li4">El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
+        <li data-i18n="s4.li5">Las correcciones no tienen historial — cada versión reemplaza a la anterior</li>
+        <li data-i18n="s4.li6">Sin avisos automáticos: el cliente no sabe cuándo está lista la documentación</li>
+        <li data-i18n="s4.li7">Las implementaciones en Zoho se configuran manualmente desde la UI</li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="slide" id="s5">
@@ -729,11 +737,15 @@ const i18n = {
     's3.m3note':'<strong>75 %</strong> vía API v8 · configuración automática',
     's3.body':'El consultor graba las reuniones y dicta las soluciones. El sistema genera el DERS, el DERCAS y configura Zoho CRM.',
     's3.body3':'El consultor <strong style="color:var(--navy)">revisa y aprueba</strong>, no configura.',
-    's4.lbl':'Problemas y soluciones','s4.title':'El trabajo manual ralentiza el negocio',
+    's4.lbl':'Problemas identificados','s4.title':'El trabajo manual ralentiza el negocio',
+    's4.desc':'La documentación de cada proyecto consume horas de trabajo artesanal que no escala ni deja trazabilidad.',
     's4.li1':'6–7 h de trabajo manual por proyecto para redactar el DERS',
-    's4.li2':'La documentación marca cuántos proyectos puedes atender y con qué margen',
-    's4.li3':'El DERCAS (viabilidad + criterios) se completa a mano',
-    's4.li4':'Las implementaciones se hacen desde la UI',
+    's4.li2':'La documentación determina cuántos proyectos puedes atender y con qué margen',
+    's4.li3':'Requerimientos sin trazabilidad a la reunión donde se discutieron',
+    's4.li4':'El DERCAS (viabilidad + criterios) se completa a mano o no se completa',
+    's4.li5':'Las correcciones no tienen historial — cada versión reemplaza a la anterior',
+    's4.li6':'Sin avisos automáticos: el cliente no sabe cuándo está lista la documentación',
+    's4.li7':'Las implementaciones en Zoho se configuran manualmente desde la UI',
     's4.p1':'Tiempo manual excesivo','s4.s1lbl':'Automatización',
     's4.s1txt':'Generación automática desde las grabaciones — 2–3 h de revisión',
     's4.p2':'Sin trazabilidad','s4.s2lbl':'Trazabilidad',
@@ -784,11 +796,15 @@ const i18n = {
     's3.m3note':'<strong>75 %</strong> via API v8 · automatic configuration',
     's3.body':'The consultant records meetings and dictates solutions. The system generates the DERS, DERCAS and configures Zoho CRM.',
     's3.body3':'The consultant <strong style="color:var(--navy)">reviews and approves</strong>, not configures.',
-    's4.lbl':'Problems and solutions','s4.title':'Manual work slows the business',
+    's4.lbl':'Identified problems','s4.title':'Manual work slows the business',
+    's4.desc':'Every project's documentation burns hours of artisanal work that doesn\'t scale and leaves no traceability.',
     's4.li1':'6–7 hours of manual work per project to draft the DERS',
     's4.li2':'Documentation determines how many projects you can take on and at what margin',
-    's4.li3':'The DERCAS (feasibility + criteria) is completed manually',
-    's4.li4':'Implementations are done from the UI',
+    's4.li3':'Requirements with no traceability to the meeting where they were discussed',
+    's4.li4':'The DERCAS (feasibility + criteria) is completed manually — or not at all',
+    's4.li5':'No changelog — each correction replaces the previous version with no history',
+    's4.li6':'No automatic notifications: the client doesn\'t know when the document is ready',
+    's4.li7':'Zoho implementations are configured manually from the UI',
     's4.p1':'Excessive manual time','s4.s1lbl':'Automation',
     's4.s1txt':'Automatic generation from recordings — 2–3 h of review',
     's4.p2':'No traceability','s4.s2lbl':'Traceability',
