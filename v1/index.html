@@ -314,9 +314,141 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
         <li data-i18n="s4.li3">Requerimientos sin trazabilidad a la reunión donde se discutieron</li>
         <li data-i18n="s4.li4">El DERCAS (viabilidad + criterios) se completa a mano o no se completa</li>
         <li data-i18n="s4.li5">Las correcciones no tienen historial — cada versión reemplaza a la anterior</li>
-        <li data-i18n="s4.li6">Sin avisos automáticos: el cliente no sabe cuándo está lista la documentación</li>
+        <li data-i18n="s4.li6">Sin avisos automáticos: el manager no sabe cuándo está lista la documentación</li>
         <li data-i18n="s4.li7">Las implementaciones en Zoho se configuran manualmente desde la UI</li>
       </ul>
+    </div>
+  </div>
+</div>
+<div class="slide" id="s4b">
+  <div class="lbl"><div class="lbl-diamond"></div><span>Cómo funciona</span></div>
+  <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;overflow:hidden">
+    <div style="zoom:0.78;font-family:Inter,system-ui,sans-serif;color:#1C1C2E">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px">
+        <div>
+          <div style="font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C13B2F;margin-bottom:8px">Guía rápida para consultores</div>
+          <div style="font-size:30px;font-weight:600;line-height:1.2;color:#1C1C2E">Sube tus ficheros, espera y recibe el documento</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;background:#fff;border:1px solid #D5D4D2;border-radius:20px;padding:7px 16px;font-size:12.5px;white-space:nowrap;flex-shrink:0;margin-left:24px;margin-top:6px">
+          <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block;flex-shrink:0"></span>
+          <span>Todo ocurre en <strong>WorkDrive</strong> · no necesitas instalar nada</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:14px">
+        <!-- DERS -->
+        <div style="border:2px solid #C13B2F;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;background:#fff">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:30px;height:30px;border-radius:50%;background:#C13B2F;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+            <div>
+              <div style="font-size:17px;font-weight:700">DERS</div>
+              <div style="font-size:11px;color:#6B7280;margin-top:1px">A partir de las reuniones con el cliente</div>
+            </div>
+          </div>
+          <div style="background:rgba(193,59,47,.07);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:12px">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none"><path d="M2 4C2 2.9 2.9 2 4 2H9L11 4H20C21.1 4 22 4.9 22 6V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V4Z" fill="#F59E0B"/></svg>
+            <span style="font-size:12px;line-height:1.45">Sube los vídeos de las reuniones a<br><strong>Grabaciones/<span style="color:#C13B2F">Cliente</span>/</strong></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:22px;height:22px;border-radius:50%;border:2.5px solid #9CA3AF;flex-shrink:0;margin-top:1px"></div>
+            <span style="font-size:12px;line-height:1.5">Espera <strong>15 min sin tocar</strong> la carpeta.<br>Luego el proceso tarda <strong>~30–50 min</strong></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:3px;flex-shrink:0;margin-top:3px">
+              <div style="height:3px;width:22px;background:#9CA3AF;border-radius:2px"></div>
+              <div style="height:3px;width:22px;background:#22c55e;border-radius:2px"></div>
+              <div style="height:3px;width:22px;background:#C13B2F;border-radius:2px"></div>
+            </div>
+            <span style="font-size:12px;line-height:1.5">Tu carpeta pasa a <strong>procesando/</strong> y después a <strong style="color:#22c55e">procesadas/</strong> (o a <strong style="color:#C13B2F">errores/</strong>)</span>
+          </div>
+          <div style="border-top:1px solid #E5E7EB;padding-top:12px">
+            <div style="font-size:11px;margin-bottom:7px">Recibes en <strong>DERS/Cliente/</strong></div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#C13B2F;border-radius:2px;flex-shrink:0;display:inline-block"></span>PDF borrador del DERS</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#3B82F6;border-radius:2px;flex-shrink:0;display:inline-block"></span>Fichero de datos (JSON)</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#22c55e;border-radius:2px;flex-shrink:0;display:inline-block"></span>Email con el PDF adjunto</div>
+            </div>
+          </div>
+        </div>
+        <!-- DERCAS -->
+        <div style="border:2px solid #C13B2F;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;background:#fff">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:30px;height:30px;border-radius:50%;background:#C13B2F;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+            <div>
+              <div style="font-size:17px;font-weight:700">DERCAS</div>
+              <div style="font-size:11px;color:#6B7280;margin-top:1px">A partir de tu dictado por audio</div>
+            </div>
+          </div>
+          <div style="background:rgba(193,59,47,.07);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:12px">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none"><path d="M2 4C2 2.9 2.9 2 4 2H9L11 4H20C21.1 4 22 4.9 22 6V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V4Z" fill="#F59E0B"/></svg>
+            <span style="font-size:12px;line-height:1.45">Sube los audios de tu dictado a<br><strong>DERCAS/<span style="color:#C13B2F">Cliente</span>/</strong></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:22px;height:22px;border-radius:50%;border:2.5px solid #9CA3AF;flex-shrink:0;margin-top:1px"></div>
+            <span style="font-size:12px;line-height:1.5">Espera <strong>15 min sin tocar</strong> la carpeta</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:3px;flex-shrink:0;margin-top:3px">
+              <div style="height:3px;width:22px;background:#9CA3AF;border-radius:2px"></div>
+              <div style="height:3px;width:22px;background:#22c55e;border-radius:2px"></div>
+              <div style="height:3px;width:22px;background:#C13B2F;border-radius:2px"></div>
+            </div>
+            <span style="font-size:12px;line-height:1.5">Igual que el DERS: <strong>procesando/</strong> → <strong style="color:#22c55e">procesadas/</strong> o <strong style="color:#C13B2F">errores/</strong></span>
+          </div>
+          <div style="border-top:1px solid #E5E7EB;padding-top:12px">
+            <div style="font-size:11px;margin-bottom:7px">Recibes en <strong>DERS/Cliente/</strong></div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#C13B2F;border-radius:2px;flex-shrink:0;display:inline-block"></span>PDF del DERCAS</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#22c55e;border-radius:2px;flex-shrink:0;display:inline-block"></span>Email con el PDF adjunto</div>
+            </div>
+            <div style="font-size:10.5px;color:#6B7280;margin-top:6px">Un solo documento en este paso</div>
+          </div>
+        </div>
+        <!-- Parametrización -->
+        <div style="border:2px solid #C13B2F;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;background:#fff">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:30px;height:30px;border-radius:50%;background:#C13B2F;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+            <div>
+              <div style="font-size:17px;font-weight:700">Parametrización</div>
+              <div style="font-size:11px;color:#6B7280;margin-top:1px">A partir del DERCAS aprobado</div>
+            </div>
+          </div>
+          <div style="background:rgba(193,59,47,.07);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:12px">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none"><path d="M2 4C2 2.9 2.9 2 4 2H9L11 4H20C21.1 4 22 4.9 22 6V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V4Z" fill="#F59E0B"/></svg>
+            <span style="font-size:12px;line-height:1.45">Mueve el DERCAS aprobado a<br><strong>Parametrizacion/<span style="color:#C13B2F">Cliente</span>/</strong></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:22px;height:22px;border-radius:50%;border:2.5px solid #9CA3AF;flex-shrink:0;margin-top:1px"></div>
+            <span style="font-size:12px;line-height:1.5">El sistema lo procesa <code style="background:#FEF9C3;padding:2px 5px;border-radius:3px;font-size:9.5px">disparo automático: próximamente</code></span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:16px;height:16px;border-radius:50%;background:#3B82F6;flex-shrink:0;margin-top:3px"></div>
+            <span style="font-size:12px;line-height:1.5"><strong>Revisas el resumen</strong> antes de aplicar nada en Zoho CRM</span>
+          </div>
+          <div style="border-top:1px solid #E5E7EB;padding-top:12px">
+            <div style="font-size:11px;margin-bottom:7px">Recibes</div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#C13B2F;border-radius:2px;flex-shrink:0;display:inline-block"></span>Resumen de la implementación</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#3B82F6;border-radius:2px;flex-shrink:0;display:inline-block"></span>Fichero de parámetros (JSON)</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11.5px"><span style="width:12px;height:12px;background:#22c55e;border-radius:2px;flex-shrink:0;display:inline-block"></span>Email de aviso</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+        <div style="background:#FEF9C3;border-radius:8px;padding:11px 14px;display:flex;align-items:center;gap:10px;font-size:12px">
+          <span style="font-size:15px;flex-shrink:0">⚠️</span>
+          <span>Usa <strong>exactamente el mismo nombre de cliente</strong> en todas las carpetas</span>
+        </div>
+        <div style="background:#F3F4F6;border-radius:8px;padding:11px 14px;display:flex;align-items:center;gap:10px;font-size:12px">
+          <span style="font-size:15px;flex-shrink:0">⏸️</span>
+          <span>Si añades algo, la espera de 15 min <strong>vuelve a empezar</strong></span>
+        </div>
+        <div style="background:#FEE2E2;border-radius:8px;padding:11px 14px;display:flex;align-items:center;gap:10px;font-size:12px">
+          <span style="font-size:15px;flex-shrink:0">❌</span>
+          <span>¿Tu carpeta está en <strong>errores/</strong>? Avisa al equipo</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -744,7 +876,7 @@ const i18n = {
     's4.li3':'Requerimientos sin trazabilidad a la reunión donde se discutieron',
     's4.li4':'El DERCAS (viabilidad + criterios) se completa a mano o no se completa',
     's4.li5':'Las correcciones no tienen historial — cada versión reemplaza a la anterior',
-    's4.li6':'Sin avisos automáticos: el cliente no sabe cuándo está lista la documentación',
+    's4.li6':'Sin avisos automáticos: el manager no sabe cuándo está lista la documentación',
     's4.li7':'Las implementaciones en Zoho se configuran manualmente desde la UI',
     's4.p1':'Tiempo manual excesivo','s4.s1lbl':'Automatización',
     's4.s1txt':'Generación automática desde las grabaciones — 2–3 h de revisión',
@@ -803,7 +935,7 @@ const i18n = {
     's4.li3':'Requirements with no traceability to the meeting where they were discussed',
     's4.li4':'The DERCAS (feasibility + criteria) is completed manually — or not at all',
     's4.li5':'No changelog — each correction replaces the previous version with no history',
-    's4.li6':'No automatic notifications: the client doesn\'t know when the document is ready',
+    's4.li6':'No automatic notifications: the manager doesn\'t know when the document is ready',
     's4.li7':'Zoho implementations are configured manually from the UI',
     's4.p1':'Excessive manual time','s4.s1lbl':'Automation',
     's4.s1txt':'Automatic generation from recordings — 2–3 h of review',
