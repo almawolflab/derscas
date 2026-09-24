@@ -376,130 +376,207 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: .88em; backgro
 <div class="slide" id="s5">
   <div class="lbl"><div class="lbl-diamond"></div><span data-i18n="s5.lbl">Arquitectura</span></div>
   <div class="aw"><img src="../logo-almawolf-lab.svg" alt="AlmaWolf Lab" style="height:22px"></div>
-  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
-    <div style="margin:0 auto;zoom:0.57;flex-shrink:0;font-family:Inter,Helvetica,Arial,sans-serif;color:rgb(32,33,36)">
-      <div style="display:flex;flex-direction:column;align-items:center">
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <div style="zoom:0.80;width:1280px;font-family:Inter,Helvetica,Arial,sans-serif;color:#202124;flex-shrink:0">
+      <!-- Header -->
+      <div style="margin-bottom:14px">
+        <div style="font-family:monospace;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c5221f;margin-bottom:4px">Automatización DERS · DERCAS · Parametrización</div>
+        <div style="font-size:22px;font-weight:500;color:#1C1C2E;line-height:1.2">De la reunión con el cliente a la implementación en Zoho CRM</div>
+      </div>
 
-        <!-- Entrada -->
-        <div style="width:1000px;box-sizing:border-box;background:rgb(241,243,244);border:1px solid rgb(218,220,224);border-radius:14px;padding:26px 32px">
-          <div style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgb(95,99,104);margin-bottom:18px">Entrada</div>
-          <div style="display:flex;align-items:center;gap:18px">
-            <div style="flex:1 1 0%;background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:12px">
-              <div style="width:34px;height:34px;border-radius:50%;background:rgb(95,99,104);display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:12px;height:12px;border-radius:50%;background:rgb(255,255,255)"></div></div>
-              <div style="font-size:16px;font-weight:500">Meeting con cliente</div>
-            </div>
-            <svg width="40" height="20" viewBox="0 0 40 20"><path d="M0 10 L30 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M40 10 L28 4 L28 16 Z" fill="#9aa0a6"></path></svg>
-            <div style="flex:1.4 1 0%;background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 18px">
-              <div style="font-size:16px;font-weight:500">Transcripción + identificación de hablante</div>
-              <div style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;color:rgb(95,99,104);margin-top:4px">en paralelo</div>
-            </div>
-            <svg width="40" height="20" viewBox="0 0 40 20"><path d="M0 10 L30 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M40 10 L28 4 L28 16 Z" fill="#9aa0a6"></path></svg>
-            <div style="background:rgb(255,255,255);border:1px solid rgb(218,220,224);border-radius:10px;padding:16px 22px;font-family:'SF Mono','Fira Code',monospace;font-size:15px;font-weight:500">Transcript</div>
+      <!-- 5-col grid -->
+      <div style="display:grid;grid-template-columns:195px 28px 1fr 28px 1fr 28px 1fr 28px 70px;align-items:start">
+
+        <!-- COL A: ENTRADA -->
+        <div style="background:#f1f3f4;border-radius:10px;padding:14px 13px">
+          <div style="font-family:monospace;font-size:8.5px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5f6368;margin-bottom:11px">Entrada · consultor</div>
+          <div style="background:#fff;border-radius:8px;border:1px solid #dadce0;border-left:3px solid #1C1C2E;padding:9px 11px">
+            <div style="font-size:12px;font-weight:600;color:#1C1C2E">Reuniones de requerimientos</div>
+            <div style="font-size:9px;color:#5f6368;margin-top:2px;font-family:monospace">Varios vídeos · 1 GB, 3 GB, 4 GB…</div>
+          </div>
+          <div style="text-align:center;padding:5px 0;color:#9aa0a6;font-size:14px">↓</div>
+          <div style="background:#fff;border-radius:8px;border:1px solid #dadce0;padding:9px 11px">
+            <div style="font-size:11px;font-weight:600;color:#1C1C2E;font-family:monospace">Grabaciones/&lt;Cliente&gt;/</div>
+            <div style="font-size:9.5px;color:#5f6368;margin-top:3px;line-height:1.4">15 min sin movimiento<br>Se reinicia si detecta cambios</div>
+          </div>
+          <div style="text-align:center;padding:5px 0;color:#9aa0a6;font-size:14px">↓</div>
+          <div style="background:#fff;border-radius:8px;border:1px solid #dadce0;padding:9px 11px">
+            <div style="font-size:12px;font-weight:600;color:#1C1C2E">Gemini transcribe fichero a fichero</div>
+            <div style="font-size:9.5px;color:#5f6368;margin-top:3px;line-height:1.35">+ reconocimiento de hablantes · trocea cada fichero</div>
+          </div>
+          <div style="text-align:center;padding:5px 0;color:#9aa0a6;font-size:14px">↓</div>
+          <div style="background:#1C1C2E;border-radius:8px;padding:10px 12px;text-align:center">
+            <div style="font-size:14px;font-weight:700;color:#fff;font-family:monospace">Transcript</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:3px">~30–50 min desde fin de subida</div>
           </div>
         </div>
 
-        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
-
-        <!-- MÓDULO 1 — DERS -->
-        <div style="width:1000px;box-sizing:border-box;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
-          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px">
-            <div style="display:flex;align-items:baseline;gap:12px">
-              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 1</span>
-              <span style="font-size:22px;font-weight:700">DERS</span>
-            </div>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;background:rgb(241,243,244);border-radius:100px;padding:5px 12px;color:rgb(60,64,67)">Plantilla 2026</span>
-          </div>
-          <div style="position:relative;width:936px;height:196px">
-            <div style="position:absolute;left:0;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:4px">
-              <div style="font-size:17px;font-weight:700">Generación</div>
-              <div style="font-size:13px;color:rgb(95,99,104)">Mapeo a la plantilla</div>
-            </div>
-            <svg width="78" height="20" viewBox="0 0 78 20" style="position:absolute;left:260px;top:45px"><path d="M8 10 L62 10" stroke="#c5221f" stroke-width="2" fill="none"></path><path d="M72 10 L60 4 L60 16 Z" fill="#c5221f"></path></svg>
-            <div style="position:absolute;left:338px;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:4px">
-              <div style="font-size:17px;font-weight:700">Review</div>
-              <div style="font-size:13px;color:rgb(95,99,104)">Enriquecimiento del borrador</div>
-            </div>
-            <svg width="78" height="20" viewBox="0 0 78 20" style="position:absolute;left:598px;top:45px"><path d="M8 10 L62 10" stroke="#c5221f" stroke-width="2" fill="none"></path><path d="M72 10 L60 4 L60 16 Z" fill="#c5221f"></path></svg>
-            <div style="position:absolute;left:676px;top:0;width:260px;height:110px;box-sizing:border-box;background:rgb(254,243,242);border:1px solid rgb(246,207,203);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:8px">
-              <div style="font-size:17px;font-weight:700">Juez de calidad</div>
-              <div style="display:flex;gap:6px;flex-wrap:wrap">
-                <span style="font-family:'SF Mono','Fira Code',monospace;font-size:12px;background:rgb(230,244,234);color:rgb(24,128,56);border-radius:100px;padding:3px 10px;font-weight:600">≥ 70 → continúa</span>
-              </div>
-            </div>
-            <svg width="936" height="86" viewBox="0 0 936 86" style="position:absolute;left:0;top:110px">
-              <path d="M806 0 L806 50 L130 50 L130 12" stroke="#c5221f" stroke-width="2" stroke-dasharray="6 5" fill="none"></path>
-              <path d="M130 2 L123 14 L137 14 Z" fill="#c5221f"></path>
-            </svg>
-            <div style="position:absolute;left:398px;top:146px;background:rgb(255,255,255);padding:2px 12px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">&lt; 70 → retry</div>
-          </div>
-          <div style="border-top:1px solid rgb(232,234,237);margin-top:8px;padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(232,240,254);color:rgb(23,78,166);border-radius:100px;padding:6px 14px;font-weight:500">JSON campo / plantilla</span>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">PDF borrador</span>
-          </div>
+        <!-- → -->
+        <div style="display:flex;align-items:center;justify-content:center;padding-top:90px">
+          <svg width="28" height="16" viewBox="0 0 28 16"><path d="M0 8 L20 8" stroke="#9aa0a6" stroke-width="2" fill="none"/><path d="M28 8 L18 3 L18 13 Z" fill="#9aa0a6"/></svg>
         </div>
 
-        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
-
-        <!-- MÓDULO 2 — DERCAS con Segunda entrada -->
-        <div style="width:1000px;position:relative">
-          <div style="width:620px;box-sizing:border-box;margin:0 auto;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
-            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px">
-              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 2</span>
-              <span style="font-size:22px;font-weight:700">DERCAS</span>
+        <!-- COL B: DERS -->
+        <div style="background:#fff;border:2px solid #c5221f;border-radius:12px;padding:14px 13px;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:5px">
+            <div style="display:flex;align-items:baseline;gap:7px">
+              <span style="font-family:monospace;font-size:10px;font-weight:600;color:#c5221f">01</span>
+              <span style="font-size:19px;font-weight:700;color:#1C1C2E">DERS</span>
             </div>
-            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px">
-              <div style="display:flex;align-items:center;gap:12px;font-size:16px"><div style="width:6px;height:6px;border-radius:50%;background:rgb(197,34,31);flex-shrink:0"></div>Transcripción de los audios del consultor</div>
-              <div style="display:flex;align-items:center;gap:12px;font-size:16px"><div style="width:6px;height:6px;border-radius:50%;background:rgb(197,34,31);flex-shrink:0"></div>Extracción de datos del DERS</div>
-            </div>
-            <div style="border-top:1px solid rgb(232,234,237);padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-              <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
-              <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">DERCAS PDF</span>
-              <span style="font-size:12px;color:rgb(128,134,139)">sin JSON intermedio</span>
-            </div>
+            <span style="font-family:monospace;font-size:9px;background:#f1f3f4;border-radius:100px;padding:2px 9px;color:#3c4043">Plantilla 2026</span>
           </div>
-          <div style="position:absolute;left:810px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:0">
-            <svg width="70" height="20" viewBox="0 0 70 20"><path d="M70 10 L12 10" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M2 10 L14 4 L14 16 Z" fill="#9aa0a6"></path></svg>
-            <div style="width:250px;box-sizing:border-box;background:rgb(241,243,244);border:1px solid rgb(218,220,224);border-radius:12px;padding:18px 20px">
-              <div style="font-family:'SF Mono','Fira Code',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgb(95,99,104);margin-bottom:10px">Segunda entrada</div>
-              <div style="display:flex;align-items:center;gap:10px">
-                <div style="width:30px;height:30px;border-radius:50%;background:rgb(95,99,104);display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:10px;height:10px;border-radius:50%;background:rgb(255,255,255)"></div></div>
-                <div style="font-size:16px;font-weight:500">Audios del consultor</div>
+          <div style="font-size:10px;color:#5f6368;margin-bottom:11px;line-height:1.4">Documento de Especificación de Requerimientos · 3 agentes</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:11px">
+            <div style="display:flex;gap:9px;align-items:flex-start">
+              <div style="width:20px;height:20px;border-radius:50%;background:#c5221f;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><span style="font-size:10px;font-weight:700;color:#fff">1</span></div>
+              <div><div style="font-size:12px;font-weight:600;color:#1C1C2E">Genera</div><div style="font-size:10px;color:#5f6368">Mapea la transcripción a la plantilla</div></div>
+            </div>
+            <div style="display:flex;gap:9px;align-items:flex-start">
+              <div style="width:20px;height:20px;border-radius:50%;background:#c5221f;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><span style="font-size:10px;font-weight:700;color:#fff">2</span></div>
+              <div><div style="font-size:12px;font-weight:600;color:#1C1C2E">Enriquece</div><div style="font-size:10px;color:#5f6368">Añade proceso y situación actual</div></div>
+            </div>
+            <div style="display:flex;gap:9px;align-items:flex-start">
+              <div style="width:20px;height:20px;border-radius:50%;background:#c5221f;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><span style="font-size:10px;font-weight:700;color:#fff">3</span></div>
+              <div>
+                <div style="font-size:12px;font-weight:600;color:#1C1C2E">Juez · revisa y valora</div>
+                <div style="display:flex;gap:5px;margin-top:3px;flex-wrap:wrap">
+                  <span style="font-family:monospace;font-size:9px;background:#e6f4ea;color:#188038;border-radius:100px;padding:2px 7px;font-weight:600">≥ 75% aprueba</span>
+                  <span style="font-family:monospace;font-size:9px;background:#fce8e6;color:#c5221f;border-radius:100px;padding:2px 7px;font-weight:600">&lt; 75% · 1 reintento</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
-
-        <!-- MÓDULO 3 — Parametrización -->
-        <div style="width:620px;box-sizing:border-box;background:rgb(255,255,255);border:2px solid rgb(197,34,31);border-radius:14px;padding:26px 32px;box-shadow:rgba(60,64,67,0.12) 0px 1px 3px">
-          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px">
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;font-weight:600;color:rgb(197,34,31)">MÓDULO 3</span>
-            <span style="font-size:22px;font-weight:700">Parametrización</span>
+          <div style="border-top:1px solid #dadce0;padding-top:9px;margin-bottom:11px;display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+            <span style="font-size:10px;color:#5f6368">Salida</span>
+            <span style="font-family:monospace;font-size:10px;background:#e8f0fe;color:#174ea6;border-radius:100px;padding:2px 9px;font-weight:500">JSON plantilla mapeada</span>
+            <span style="font-family:monospace;font-size:10px;background:#fce8e6;color:#a31607;border-radius:100px;padding:2px 9px;font-weight:500">PDF borrador</span>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
-            <span style="font-size:13px;color:rgb(95,99,104)">Input</span>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(241,243,244);border-radius:100px;padding:6px 14px;font-weight:500">DERCAS</span>
-          </div>
-          <div style="border-top:1px solid rgb(232,234,237);padding-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <span style="font-size:13px;color:rgb(95,99,104);margin-right:4px">Salida</span>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(232,240,254);color:rgb(23,78,166);border-radius:100px;padding:6px 14px;font-weight:500">JSON mapeo CRM + plantilla</span>
-            <span style="font-family:'SF Mono','Fira Code',monospace;font-size:13px;background:rgb(252,232,230);color:rgb(163,22,15);border-radius:100px;padding:6px 14px;font-weight:500">Resumen de implementación</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:auto">
+            <div style="background:#1C1C2E;border-radius:8px;padding:9px 11px">
+              <div style="font-size:20px;font-weight:700;color:#c5221f">80%</div>
+              <div style="font-size:9px;color:rgba(255,255,255,.6);margin-top:2px;line-height:1.3">coincide con el DERS real · prueba ciega</div>
+            </div>
+            <div style="background:#1C1C2E;border-radius:8px;padding:9px 11px">
+              <div style="font-size:13px;font-weight:700;color:#c5221f;line-height:1.3">6–10 h<br>→ 2–4 h</div>
+              <div style="font-size:9px;color:rgba(255,255,255,.6);margin-top:2px;line-height:1.3">estimación · a calibrar</div>
+            </div>
           </div>
         </div>
 
-        <div style="padding:10px 0"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 30" stroke="#9aa0a6" stroke-width="2" fill="none"></path><path d="M12 40 L5 28 L19 28 Z" fill="#9aa0a6"></path></svg></div>
+        <!-- → -->
+        <div style="display:flex;align-items:center;justify-content:center;padding-top:90px">
+          <svg width="28" height="16" viewBox="0 0 28 16"><path d="M0 8 L20 8" stroke="#9aa0a6" stroke-width="2" fill="none"/><path d="M28 8 L18 3 L18 13 Z" fill="#9aa0a6"/></svg>
+        </div>
 
-        <!-- Destino — Zoho CRM -->
-        <div style="width:420px;box-sizing:border-box;background:rgb(13,27,62);border-radius:14px;padding:26px 32px;display:flex;align-items:center;justify-content:center;gap:14px">
-          <div style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center"><div style="width:12px;height:12px;border-radius:3px;background:rgb(255,255,255)"></div></div>
-          <div>
-            <div style="font-family:'SF Mono','Fira Code',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgb(170,180,200)">Destino</div>
-            <div style="font-size:22px;font-weight:700;color:rgb(255,255,255)">Zoho CRM</div>
+        <!-- COL C: DERCAS -->
+        <div style="background:#fff;border:2px solid #c5221f;border-radius:12px;padding:14px 13px;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
+            <span style="font-family:monospace;font-size:10px;font-weight:600;color:#c5221f">02</span>
+            <span style="font-size:19px;font-weight:700;color:#1C1C2E">DERCAS</span>
+          </div>
+          <div style="font-size:10px;color:#5f6368;margin-bottom:11px;line-height:1.4">Requerimientos → criterios de implementación y de validación</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:9px">
+            <div style="background:#f1f3f4;border-radius:7px;padding:9px 10px">
+              <div style="font-size:11px;font-weight:600;color:#1C1C2E">Audios del consultor</div>
+              <div style="font-family:monospace;font-size:8.5px;color:#5f6368;margin-top:2px">DERCAS/&lt;Cliente&gt;/ · 15 min</div>
+            </div>
+            <div style="background:#f1f3f4;border-radius:7px;padding:9px 10px">
+              <div style="font-size:11px;font-weight:600;color:#1C1C2E">DERS aprobado</div>
+              <div style="font-size:9px;color:#5f6368;margin-top:2px">del mismo cliente</div>
+            </div>
+          </div>
+          <div style="background:#f1f3f4;border-radius:7px;padding:9px 11px;margin-bottom:9px">
+            <div style="font-size:12px;font-weight:600;color:#1C1C2E">Gemini · 1 pasada guiada</div>
+            <div style="font-family:monospace;font-size:9px;color:#5f6368;margin-top:2px">transcribe audios → genera</div>
+            <div style="font-size:9.5px;color:#5f6368;margin-top:3px">Rellena viabilidad + criterios · sin inventar</div>
+          </div>
+          <div style="border-top:1px solid #dadce0;padding-top:9px;margin-bottom:9px;display:flex;gap:5px;align-items:center">
+            <span style="font-size:10px;color:#5f6368">Salida</span>
+            <span style="font-family:monospace;font-size:10px;background:#fce8e6;color:#a31607;border-radius:100px;padding:2px 9px;font-weight:500">Borrador DERCAS PDF</span>
+          </div>
+          <div style="background:#1C1C2E;border-radius:7px;padding:9px 11px;margin-bottom:11px">
+            <div style="font-size:10px;color:rgba(255,255,255,.9);line-height:1.4"><span style="color:#93b8ff;font-weight:600">Consultor aprueba</span> → pasa a la carpeta de implementación</div>
+          </div>
+          <div style="background:#1C1C2E;border-radius:8px;padding:9px 11px;margin-top:auto">
+            <div style="display:flex;align-items:baseline;gap:7px">
+              <span style="font-size:22px;font-weight:700;color:#c5221f">100%</span>
+              <span style="font-size:10px;color:rgba(255,255,255,.6)">efectividad en las pruebas</span>
+            </div>
           </div>
         </div>
 
+        <!-- → -->
+        <div style="display:flex;align-items:center;justify-content:center;padding-top:90px">
+          <svg width="28" height="16" viewBox="0 0 28 16"><path d="M0 8 L20 8" stroke="#9aa0a6" stroke-width="2" fill="none"/><path d="M28 8 L18 3 L18 13 Z" fill="#9aa0a6"/></svg>
+        </div>
+
+        <!-- COL D: PARAMETRIZACIÓN -->
+        <div style="background:#fff;border:2px solid #c5221f;border-radius:12px;padding:14px 13px;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:baseline;gap:7px;margin-bottom:5px">
+            <span style="font-family:monospace;font-size:10px;font-weight:600;color:#c5221f">03</span>
+            <span style="font-size:19px;font-weight:700;color:#1C1C2E">Parametrización</span>
+          </div>
+          <div style="font-size:10px;color:#5f6368;margin-bottom:11px;line-height:1.4">JSON clave-valor: qué atributo de Zoho (módulos, clientes, categorías…) y cómo</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:9px">
+            <div style="background:#f1f3f4;border-radius:7px;padding:9px 11px">
+              <div style="font-size:11px;font-weight:600;color:#1C1C2E">2 agentes Gemini</div>
+              <div style="font-family:monospace;font-size:9px;color:#5f6368;margin-top:2px">mapper → revisor</div>
+            </div>
+            <div style="background:#e6f4ea;border-radius:7px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:11px;font-weight:600;color:#1C1C2E">API V8 Zoho</div>
+                <div style="font-family:monospace;font-size:9px;color:#5f6368;margin-top:2px">robusta · madura · menos tokens</div>
+              </div>
+              <span style="font-size:11px;font-weight:700;color:#188038">✓</span>
+            </div>
+            <div style="background:#f8f9fa;border-radius:7px;padding:9px 11px">
+              <div style="font-size:11px;font-weight:600;color:#9aa0a6;text-decoration:line-through">MCP</div>
+              <div style="font-size:9px;color:#9aa0a6;margin-top:2px">descartado: tokens, fallos, conexión</div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #dadce0;padding-top:9px;margin-bottom:9px;display:flex;gap:5px;flex-wrap:wrap;align-items:center">
+            <span style="font-size:10px;color:#5f6368">Salida</span>
+            <span style="font-family:monospace;font-size:10px;background:#e8f0fe;color:#174ea6;border-radius:100px;padding:2px 9px;font-weight:500">JSON API V8</span>
+            <span style="font-family:monospace;font-size:10px;background:#fce8e6;color:#a31607;border-radius:100px;padding:2px 9px;font-weight:500">Resumen</span>
+          </div>
+          <div style="background:#1C1C2E;border-radius:7px;padding:9px 11px;margin-bottom:11px">
+            <div style="font-size:10px;color:rgba(255,255,255,.9);line-height:1.4"><span style="color:#93b8ff;font-weight:600">Consultor aprueba</span> → aplicación al CRM, paso aparte con aprobación</div>
+          </div>
+          <div style="background:#1C1C2E;border-radius:8px;padding:9px 11px;margin-top:auto">
+            <div style="display:flex;align-items:baseline;gap:7px">
+              <span style="font-size:22px;font-weight:700;color:#c5221f">70%</span>
+              <span style="font-size:10px;color:rgba(255,255,255,.6)">de los parámetros aplicados en el CRM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- → -->
+        <div style="display:flex;align-items:center;justify-content:center;padding-top:90px">
+          <svg width="28" height="16" viewBox="0 0 28 16"><path d="M0 8 L20 8" stroke="#9aa0a6" stroke-width="2" fill="none"/><path d="M28 8 L18 3 L18 13 Z" fill="#9aa0a6"/></svg>
+        </div>
+
+        <!-- COL E: ZOHO CRM -->
+        <div style="background:#1C1C2E;border-radius:10px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:160px">
+          <div style="width:28px;height:28px;border-radius:5px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin-bottom:9px"><div style="width:10px;height:10px;border-radius:2px;background:#fff"></div></div>
+          <div style="font-size:14px;font-weight:700;color:#fff;line-height:1.3">Zoho<br>CRM</div>
+        </div>
+
+      </div>
+
+      <!-- Footnotes -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px">
+        <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:14px 16px">
+          <div style="font-family:monospace;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c5221f;margin-bottom:10px">Por qué transcribir fuera de Zoho</div>
+          <div style="font-size:11px;color:#3c4043;line-height:1.6">· Zoho no reconoce hablantes<br>· Los documentos viajan a un tercero en EE. UU.: no es compliance-friendly<br>· Gemini sí reconoce hablantes · solo para clientes que lo permiten</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:14px 16px">
+          <div style="font-family:monospace;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c5221f;margin-bottom:10px">Por qué 3 agentes</div>
+          <div style="font-size:11px;color:#3c4043;line-height:1.6">Una sola pasada de mapeo era insuficiente:<br>· Dejaba información fuera<br>· Poca justificación o fuera de alcance</div>
+        </div>
+        <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:14px 16px">
+          <div style="font-family:monospace;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c5221f;margin-bottom:10px">Métricas en tiempo real · Próximo paso</div>
+          <div style="font-size:11px;color:#3c4043;line-height:1.6">· DERS generado vs. DERS final del consultor<br>· DERCAS dictado vs. histórico de DERCAS de la organización<br>· % de ahorro de tiempo por consultor</div>
+        </div>
       </div>
     </div>
   </div>
